@@ -3,1109 +3,612 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Business Consulting Services | Operations, Leadership & Systems | CederBI</title>
-  <meta name="description" content="Fractional CEO and operations consulting for business owners in Texas, Nebraska and Iowa. Get clarity on what's broken, build the systems to fix it, and stop being the bottleneck in your own business." />
+  <title>Services | Operations Audits & Custom System Builds | CederBI</title>
+  <meta name="description" content="Three ways to work together: Operations Audit ($750), Custom Systems Build (scoped), or Fractional Partner retainer. Built for restaurant & hospitality operators." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="favicon.png" />
+
   <style>
-/* =========================================================
-   CHRISTOPHER CEDER — SITE STYLESHEET
-   Palette: Warm ivory + deep slate + amber gold accent
-   Type: Fraunces (display) + Inter (body)
-   ========================================================= */
+    :root {
+      --bg-0: #090B0F;
+      --bg-1: #0F1117;
+      --bg-2: #14161E;
+      --bdr: rgba(255, 255, 255, 0.07);
+      --bdr-hover: rgba(255, 255, 255, 0.14);
+      --bdr-accent: rgba(124, 58, 237, 0.28);
+      --c-amber:  #F59E0B;
+      --c-violet: #7C3AED;
+      --c-indigo: #4F46E5;
+      --grad:   linear-gradient(135deg, #F59E0B 0%, #7C3AED 52%, #4F46E5 100%);
+      --grad-h: linear-gradient(90deg,  #F59E0B 0%, #7C3AED 52%, #4F46E5 100%);
+      --t1: #F1F5F9;
+      --t2: #94A3B8;
+      --t3: #475569;
+      --f-disp: 'Space Grotesk', system-ui, sans-serif;
+      --f-body: 'Inter', system-ui, sans-serif;
+      --max-w: 1160px;
+      --sp: 120px;
+      --r: 16px;
+    }
 
-/* RESET & BASE */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-0);
+      color: var(--t1);
+      font-family: var(--f-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-:root {
-  --ivory:      #F7F4EF;
-  --ivory-dark: #EDE8DF;
-  --slate:      #1E2328;
-  --slate-mid:  #2E3640;
-  --stone:      #6B7280;
-  --gold:       #C9883D;
-  --gold-light: #E8B870;
-  --gold-bg:    #FDF6EC;
-  --white:      #FFFFFF;
+    .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 28px; }
+    .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .rule {
+      width: 100%;
+      height: 1px;
+      background: var(--grad-h);
+      opacity: 0.22;
+    }
+    .eyebrow {
+      display: block;
+      font-family: var(--f-disp);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--t3);
+      margin-bottom: 18px;
+    }
 
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--f-disp);
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      padding: 13px 26px;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--grad); color: #07060A; }
+    .btn-primary:hover { opacity: 0.87; }
+    .btn-ghost { background: transparent; color: var(--t2); border: 1px solid var(--bdr); }
+    .btn-ghost:hover { border-color: var(--bdr-hover); color: var(--t1); }
 
-  --max-w: 1120px;
-  --section-pad: clamp(4rem, 8vw, 7rem);
-  --radius: 4px;
-  --radius-lg: 12px;
-  --shadow: 0 2px 16px rgba(30,35,40,0.08);
-  --shadow-card: 0 4px 24px rgba(30,35,40,0.10);
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      padding: 0 28px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      background: rgba(9, 11, 15, 0.65);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--bdr);
+      transition: background 0.3s;
+    }
+    .nav-inner {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--f-disp);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--t1);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--f-disp);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--t3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--t1); }
+    .nav-cta {
+      font-family: var(--f-disp);
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--grad);
+      color: #07060A !important;
+      padding: 9px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
 
-  --transition: 0.22s ease;
-}
+    section { padding: var(--sp) 28px; }
 
-body {
-  font-family: var(--font-body);
-  background: var(--ivory);
-  color: var(--slate);
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-}
+    .hero {
+      min-height: 60vh;
+      padding: 120px 28px 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+    .hero-glow {
+      position: absolute;
+      top: -180px; right: -180px;
+      width: 580px; height: 580px;
+      background: radial-gradient(circle, rgba(124,58,237,0.11) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero h1 {
+      font-family: var(--f-disp);
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      color: var(--t1);
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 17px;
+      color: var(--t2);
+      line-height: 1.68;
+      max-width: 560px;
+    }
 
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
+    .sec-head {
+      margin-bottom: 60px;
+    }
+    .sec-head h2 {
+      font-family: var(--f-disp);
+      font-size: clamp(30px, 4vw, 50px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.08;
+      color: var(--t1);
+    }
+    .sec-head p {
+      margin-top: 16px;
+      font-size: 17px;
+      color: var(--t2);
+      max-width: 500px;
+      line-height: 1.65;
+    }
 
-/* TYPOGRAPHY */
-h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
-}
-h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
-h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
-h3 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
-h4 { font-size: 1.05rem; font-weight: 600; }
+    .services-bg { background: var(--bg-1); }
 
-em { font-style: italic; color: var(--gold); }
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
 
-p { color: var(--slate-mid); }
+    .service-card {
+      background: var(--bg-0);
+      border: 1px solid var(--bdr);
+      border-radius: var(--r);
+      padding: 40px 32px;
+      position: relative;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+    .service-card:hover {
+      border-color: var(--bdr-hover);
+      transform: translateY(-2px);
+    }
 
-.eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.8rem;
-  display: block;
-}
+    .service-card.featured {
+      background: var(--bg-2);
+      border-color: var(--bdr-accent);
+    }
 
-/* UTILITIES */
-.container {
-  width: 100%;
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 3rem);
-}
+    .svc-badge {
+      position: absolute;
+      top: -1px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--grad);
+      color: #07060A;
+      font-family: var(--f-disp);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 0 0 8px 8px;
+      white-space: nowrap;
+    }
 
-.section-header {
-  max-width: 640px;
-  margin-bottom: 3.5rem;
-}
-.section-sub {
-  margin-top: 1rem;
-  font-size: 1.05rem;
-  color: var(--stone);
-}
+    .svc-tier {
+      font-family: var(--f-disp);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--t3);
+      margin-bottom: 12px;
+    }
 
-/* BUTTONS */
-.btn-primary {
-  display: inline-block;
-  background: var(--slate);
-  color: var(--white);
-  padding: 0.85rem 2rem;
-  border-radius: var(--radius);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  transition: background var(--transition), transform var(--transition);
-}
-.btn-primary:hover { background: var(--gold); transform: translateY(-1px); }
+    .service-card h3 {
+      font-family: var(--f-disp);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--t1);
+      margin-bottom: 10px;
+    }
 
-.btn-ghost {
-  display: inline-block;
-  border: 1.5px solid var(--slate);
-  color: var(--slate);
-  padding: 0.8rem 1.9rem;
-  border-radius: var(--radius);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 600;
-  transition: border-color var(--transition), color var(--transition), transform var(--transition);
-}
-.btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
+    .svc-desc {
+      font-size: 14px;
+      color: var(--t2);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
 
-.btn-large { padding: 1rem 2.4rem; font-size: 1rem; }
-.btn-full { width: 100%; text-align: center; }
+    .svc-price {
+      font-family: var(--f-disp);
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--t1);
+      margin-bottom: 28px;
+    }
+    .svc-price small {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--t3);
+      letter-spacing: 0;
+    }
 
-/* ==========================
-   NAVIGATION
-   ========================== */
-.nav-wrap {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(247,244,239,0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--ivory-dark);
-  transition: box-shadow var(--transition);
-}
-.nav-wrap.scrolled { box-shadow: var(--shadow); }
+    .svc-divider { height: 1px; background: var(--bdr); margin-bottom: 22px; }
 
-.nav-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 3rem);
-  height: 68px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
+    .svc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 32px;
+    }
+    .svc-list li {
+      display: flex;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--t2);
+      line-height: 1.5;
+    }
+    .svc-list li::before {
+      content: '→';
+      font-family: var(--f-disp);
+      font-size: 11px;
+      color: var(--c-violet);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
 
-.logo {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 400;
-  color: var(--slate);
-  letter-spacing: -0.01em;
-  flex-shrink: 0;
-}
+    .svc-card .btn { width: 100%; }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 0.25rem;
-  align-items: center;
-}
-.nav-links a {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--stone);
-  padding: 0.5rem 0.9rem;
-  border-radius: var(--radius);
-  transition: color var(--transition), background var(--transition);
-}
-.nav-links a:hover, .nav-links a.active { color: var(--slate); }
-.nav-links .nav-cta {
-  background: var(--slate);
-  color: var(--white) !important;
-  padding: 0.5rem 1.1rem;
-  margin-left: 0.5rem;
-}
-.nav-links .nav-cta:hover { background: var(--gold); }
+    .faq-section {
+      background: var(--bg-0);
+    }
 
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.25rem;
-}
-.nav-toggle span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--slate);
-  border-radius: 2px;
-  transition: transform var(--transition), opacity var(--transition);
-}
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
 
-/* ==========================
-   HERO
-   ========================== */
-.hero {
-  position: relative;
-  padding: clamp(5rem, 12vw, 9rem) 0 clamp(4rem, 9vw, 7rem);
-  overflow: hidden;
-}
-.hero-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 3rem);
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-}
-.hero h1 { margin-bottom: 1.4rem; }
-.hero-sub {
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
-  color: var(--stone);
-  max-width: 560px;
-  margin-bottom: 2.4rem;
-}
-.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .faq-item {
+      background: var(--bg-1);
+      border: 1px solid var(--bdr);
+      border-radius: var(--r);
+      padding: 32px;
+    }
 
-.hero-mark {
-  position: absolute;
-  right: -4%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: clamp(280px, 40vw, 480px);
-  aspect-ratio: 1;
-  color: var(--ivory-dark);
-  opacity: 0.8;
-  pointer-events: none;
-  animation: slowSpin 60s linear infinite;
-}
-@keyframes slowSpin { to { transform: translateY(-50%) rotate(360deg); } }
+    .faq-q {
+      font-family: var(--f-disp);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--t1);
+      margin-bottom: 12px;
+    }
 
-/* ==========================
-   TENSION QUOTE
-   ========================== */
-.tension {
-  background: var(--slate);
-  padding: 3rem 0;
-}
-.tension p {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.8vw, 2rem);
-  color: var(--ivory);
-  text-align: center;
-  font-weight: 300;
-}
-.tension em { color: var(--gold-light); }
+    .faq-a {
+      font-size: 14px;
+      color: var(--t2);
+      line-height: 1.7;
+    }
 
-/* ==========================
-   HOW I WORK
-   ========================== */
-.how-i-work {
-  padding: var(--section-pad) 0;
-  background: var(--white);
-}
+    .cta-section {
+      background: var(--bg-0);
+      text-align: center;
+    }
 
-.pillars {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-.pillar {
-  padding: 2.4rem 2rem;
-  border: 1px solid var(--ivory-dark);
-  border-radius: var(--radius-lg);
-  transition: box-shadow var(--transition), border-color var(--transition);
-}
-.pillar:hover { box-shadow: var(--shadow-card); border-color: var(--gold-light); }
-.pillar-icon {
-  font-size: 1.8rem;
-  margin-bottom: 1.2rem;
-}
-.pillar h3 { margin-bottom: 0.75rem; }
-.pillar p { color: var(--stone); font-size: 0.95rem; }
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-/* ==========================
-   SERVICES PREVIEW
-   ========================== */
-.services-preview {
-  padding: var(--section-pad) 0;
-  background: var(--ivory);
-}
+    .cta-inner h2 {
+      font-family: var(--f-disp);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      color: var(--t1);
+      margin-bottom: 20px;
+    }
+    .cta-inner p {
+      font-size: 17px;
+      color: var(--t2);
+      line-height: 1.65;
+      margin-bottom: 40px;
+    }
 
-.service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
-}
+    footer {
+      border-top: 1px solid var(--bdr);
+      padding: 44px 28px;
+      background: var(--bg-0);
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: var(--f-disp);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--t1);
+      text-decoration: none;
+    }
+    .footer-nav {
+      display: flex;
+      gap: 26px;
+      list-style: none;
+    }
+    .footer-nav a {
+      font-size: 13px;
+      color: var(--t3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: var(--t1); }
+    .footer-copy {
+      font-size: 12px;
+      color: var(--t3);
+    }
 
-.service-card {
-  display: block;
-  padding: 2.2rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--ivory-dark);
-  background: var(--white);
-  transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition);
-  cursor: pointer;
-}
-.service-card:hover {
-  box-shadow: var(--shadow-card);
-  border-color: var(--gold-light);
-  transform: translateY(-3px);
-}
-.service-card--featured {
-  border-color: var(--gold);
-  background: var(--gold-bg);
-}
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .d1 { transition-delay: 0.08s; }
+    .d2 { transition-delay: 0.16s; }
+    .d3 { transition-delay: 0.24s; }
 
-.card-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
-  background: rgba(201,136,61,0.12);
-  padding: 0.25rem 0.65rem;
-  border-radius: 20px;
-  margin-bottom: 1rem;
-}
-.service-card h3 { margin-bottom: 0.8rem; font-size: 1.35rem; }
-.service-card p { font-size: 0.93rem; color: var(--stone); margin-bottom: 0.75rem; }
-.card-best { color: var(--slate-mid) !important; font-size: 0.88rem !important; }
-.card-link { font-size: 0.88rem; font-weight: 600; color: var(--gold); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
 
-.services-cta { text-align: center; }
-
-/* ==========================
-   PROOF / QUOTE
-   ========================== */
-.proof {
-  background: var(--gold-bg);
-  padding: var(--section-pad) 0;
-  border-top: 1px solid rgba(201,136,61,0.2);
-  border-bottom: 1px solid rgba(201,136,61,0.2);
-}
-.proof-inner { max-width: 760px; margin: 0 auto; text-align: center; }
-blockquote p {
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
-  font-weight: 300;
-  font-style: italic;
-  color: var(--slate);
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-}
-blockquote cite {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: var(--stone);
-  font-style: normal;
-}
-
-/* ==========================
-   WHO THIS IS FOR
-   ========================== */
-.who-for {
-  padding: var(--section-pad) 0;
-  background: var(--white);
-}
-.who-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-.who-text h2 { margin-bottom: 1.5rem; }
-.who-list {
-  list-style: none;
-  margin-bottom: 2rem;
-}
-.who-list li {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--ivory-dark);
-  color: var(--slate-mid);
-  font-size: 0.95rem;
-  display: flex;
-  gap: 0.75rem;
-}
-.who-list li::before {
-  content: "→";
-  color: var(--gold);
-  flex-shrink: 0;
-}
-
-.visual-box {
-  background: var(--ivory);
-  border: 1px solid var(--ivory-dark);
-  border-radius: var(--radius-lg);
-  padding: 2.4rem 2rem;
-  text-align: center;
-}
-.vb-label {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--stone);
-  margin-bottom: 1rem;
-}
-.vb-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-.vb-items span {
-  padding: 0.4rem 0.9rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-.vb-items.before span { background: rgba(107,114,128,0.1); color: var(--stone); }
-.vb-items.after span { background: rgba(201,136,61,0.15); color: var(--gold); }
-.vb-arrow {
-  font-size: 1.5rem;
-  color: var(--gold);
-  margin: 0.75rem 0;
-}
-
-/* ==========================
-   ABOUT TEASER
-   ========================== */
-.about-teaser {
-  padding: var(--section-pad) 0;
-  background: var(--ivory);
-}
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-  align-items: center;
-}
-.img-frame {
-  background: var(--ivory-dark);
-  border-radius: var(--radius-lg);
-  aspect-ratio: 3/4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--stone);
-  font-size: 0.85rem;
-  border: 2px dashed rgba(107,114,128,0.3);
-}
-.img-frame.large { aspect-ratio: 4/5; }
-.about-text h2 { margin-bottom: 1.4rem; }
-.about-text p { margin-bottom: 1rem; color: var(--stone); }
-.about-text .btn-ghost { margin-top: 0.5rem; }
-
-/* ==========================
-   CTA STRIP
-   ========================== */
-.cta-strip {
-  background: var(--slate);
-  padding: var(--section-pad) 0;
-  text-align: center;
-}
-.cta-strip h2 { color: var(--ivory); margin-bottom: 1rem; }
-.cta-strip p { color: rgba(247,244,239,0.7); max-width: 560px; margin: 0 auto 2.5rem; font-size: 1.05rem; }
-.cta-strip .btn-primary { background: var(--gold); }
-.cta-strip .btn-primary:hover { background: var(--gold-light); }
-
-/* ==========================
-   FOOTER
-   ========================== */
-.site-footer {
-  background: var(--ivory-dark);
-  border-top: 1px solid rgba(30,35,40,0.08);
-  padding: 3rem 0;
-}
-.footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-.footer-brand .logo { font-size: 1rem; }
-.footer-brand p { font-size: 0.82rem; color: var(--stone); margin-top: 0.25rem; }
-.footer-nav {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.footer-nav a { font-size: 0.88rem; color: var(--stone); transition: color var(--transition); }
-.footer-nav a:hover { color: var(--slate); }
-.footer-copy { font-size: 0.8rem; color: var(--stone); width: 100%; }
-
-/* ==========================
-   PAGE HERO (inner pages)
-   ========================== */
-.page-hero {
-  padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(2.5rem, 5vw, 4rem);
-  background: var(--white);
-  border-bottom: 1px solid var(--ivory-dark);
-}
-.page-hero h1 { margin-top: 0.5rem; }
-.page-hero .hero-sub {
-  font-size: 1.05rem;
-  color: var(--stone);
-  max-width: 600px;
-  margin-top: 1.2rem;
-}
-
-/* ==========================
-   SERVICES DETAIL
-   ========================== */
-.service-detail { padding: var(--section-pad) 0; }
-.service-detail:nth-child(odd) { background: var(--white); }
-.service-detail:nth-child(even) { background: var(--ivory); }
-
-.service-detail-grid {
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 4rem;
-  align-items: start;
-}
-.service-detail-text h2 { margin: 0.6rem 0 0.4rem; }
-.service-price {
-  font-size: 0.88rem;
-  color: var(--stone);
-  margin-bottom: 1.5rem;
-  font-style: italic;
-}
-.service-detail-text p { margin-bottom: 1rem; color: var(--stone); }
-.service-detail-text h4 { margin: 1.5rem 0 0.75rem; color: var(--slate); }
-.service-list {
-  list-style: none;
-  margin-bottom: 1.5rem;
-}
-.service-list li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--ivory-dark);
-  color: var(--slate-mid);
-  font-size: 0.93rem;
-  display: flex;
-  gap: 0.7rem;
-}
-.service-list li::before { content: "✓"; color: var(--gold); flex-shrink: 0; }
-
-.aside-card {
-  background: var(--ivory);
-  border: 1px solid var(--ivory-dark);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  position: sticky;
-  top: 88px;
-}
-.aside-card h4 { margin-bottom: 1rem; }
-.aside-card ul { list-style: none; }
-.aside-card li {
-  padding: 0.55rem 0;
-  border-bottom: 1px solid var(--ivory-dark);
-  font-size: 0.9rem;
-  color: var(--stone);
-  display: flex;
-  gap: 0.6rem;
-}
-.aside-card li::before { content: "·"; color: var(--gold); font-size: 1.2rem; line-height: 1; }
-
-.service-divider { padding: 0; }
-.service-divider hr { border: none; border-top: 1px solid var(--ivory-dark); }
-
-/* ==========================
-   FAQ
-   ========================== */
-.faq-section {
-  padding: var(--section-pad) 0;
-  background: var(--gold-bg);
-}
-.faq-list { max-width: 760px; }
-.faq-item { border-bottom: 1px solid rgba(201,136,61,0.25); }
-.faq-q {
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  padding: 1.3rem 0;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--slate);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-.faq-q::after {
-  content: "+";
-  font-size: 1.3rem;
-  color: var(--gold);
-  flex-shrink: 0;
-  transition: transform var(--transition);
-}
-.faq-q[aria-expanded="true"]::after { transform: rotate(45deg); }
-.faq-a {
-  display: none;
-  padding-bottom: 1.3rem;
-}
-.faq-a.open { display: block; }
-.faq-a p { color: var(--stone); font-size: 0.95rem; }
-
-/* ==========================
-   ABOUT FULL PAGE
-   ========================== */
-.about-full {
-  padding: var(--section-pad) 0;
-  background: var(--white);
-}
-.about-full-grid {
-  display: grid;
-  grid-template-columns: 340px 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-.about-full-text h2 { margin-bottom: 1.4rem; }
-.about-full-text p { margin-bottom: 1rem; color: var(--stone); }
-
-.principles {
-  padding: var(--section-pad) 0;
-  background: var(--ivory);
-}
-.principles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-}
-.principle-item {
-  padding: 2rem;
-  background: var(--white);
-  border: 1px solid var(--ivory-dark);
-  border-radius: var(--radius-lg);
-}
-.principle-item h3 { margin-bottom: 0.75rem; font-size: 1.15rem; }
-.principle-item p { font-size: 0.93rem; color: var(--stone); }
-
-.what-i-bring {
-  padding: var(--section-pad) 0;
-  background: var(--white);
-}
-.bring-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-.bring-item {
-  padding: 1.5rem;
-  border-top: 2px solid var(--gold);
-}
-.bring-label {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.6rem;
-}
-.bring-item p { font-size: 0.88rem; color: var(--stone); }
-
-.personal-note {
-  padding: var(--section-pad) 0;
-  background: var(--slate);
-}
-.note-inner {
-  max-width: 680px;
-  margin: 0 auto;
-  text-align: center;
-}
-.note-inner .eyebrow { color: var(--gold-light); }
-.note-inner p { color: rgba(247,244,239,0.78); margin-bottom: 1.2rem; font-size: 1.05rem; }
-.note-inner .btn-primary { background: var(--gold); margin-top: 0.5rem; }
-.note-inner .btn-primary:hover { background: var(--gold-light); }
-
-/* ==========================
-   CONTACT PAGE
-   ========================== */
-.contact-hero {
-  padding: clamp(3rem, 7vw, 6rem) 0 var(--section-pad);
-}
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 5rem;
-  align-items: start;
-}
-.contact-text h1 { margin: 0.5rem 0 1.2rem; }
-.contact-text p { color: var(--stone); margin-bottom: 1rem; font-size: 0.98rem; }
-
-.contact-direct { margin-top: 2.5rem; }
-.contact-direct-label {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--stone);
-  margin-bottom: 0.75rem;
-}
-.contact-link {
-  display: block;
-  color: var(--slate);
-  font-weight: 500;
-  padding: 0.65rem 0;
-  border-bottom: 1px solid var(--ivory-dark);
-  transition: color var(--transition);
-  font-size: 0.95rem;
-}
-.contact-link:hover { color: var(--gold); }
-
-.contact-form-wrap {
-  background: var(--white);
-  border: 1px solid var(--ivory-dark);
-  border-radius: var(--radius-lg);
-  padding: 2.5rem 2.2rem;
-  box-shadow: var(--shadow-card);
-}
-.contact-form { display: flex; flex-direction: column; gap: 1.4rem; }
-.form-row { display: flex; flex-direction: column; gap: 0.4rem; }
-.form-row label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--slate);
-}
-.form-row input,
-.form-row textarea,
-.form-row select {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1.5px solid var(--ivory-dark);
-  border-radius: var(--radius);
-  font-family: var(--font-body);
-  font-size: 0.93rem;
-  color: var(--slate);
-  background: var(--ivory);
-  transition: border-color var(--transition), box-shadow var(--transition);
-  outline: none;
-  appearance: none;
-}
-.form-row input:focus,
-.form-row textarea:focus,
-.form-row select:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(201,136,61,0.12);
-}
-.form-row textarea { resize: vertical; min-height: 110px; }
-.form-note {
-  text-align: center;
-  font-size: 0.82rem;
-  color: var(--stone);
-  margin-top: -0.5rem;
-}
-
-/* ==========================
-   RESPONSIVE
-   ========================== */
-@media (max-width: 900px) {
-  .who-grid,
-  .about-grid,
-  .about-full-grid,
-  .service-detail-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  .hero-mark { display: none; }
-  .who-visual { order: -1; }
-  .aside-card { position: static; }
-  .about-full-img .img-frame { max-width: 320px; aspect-ratio: 1/1; }
-}
-
-@media (max-width: 640px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 68px;
-    left: 0;
-    right: 0;
-    background: var(--ivory);
-    border-bottom: 1px solid var(--ivory-dark);
-    flex-direction: column;
-    padding: 1rem;
-    gap: 0.25rem;
-  }
-  .nav-links.open { display: flex; }
-  .nav-links a { display: block; padding: 0.75rem 1rem; }
-  .nav-toggle { display: flex; }
-
-  .hero-actions { flex-direction: column; }
-  .hero-actions .btn-primary,
-  .hero-actions .btn-ghost { text-align: center; }
-
-  .service-cards { grid-template-columns: 1fr; }
-  .pillars { grid-template-columns: 1fr; }
-  .principles-grid { grid-template-columns: 1fr; }
-  .bring-grid { grid-template-columns: 1fr 1fr; }
-  .footer-inner { flex-direction: column; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-}
-
-/* Logo image in nav */
-.logo { display: flex; align-items: center; gap: 0.6rem; }
-.logo-img { height: 40px; width: auto; display: block; }
-.logo-text { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; color: var(--slate); letter-spacing: -0.01em; }
-
-/* Green accent from logo */
-:root { --green: #2A7A3B; --green-light: #3E9B51; }
-
-.pillar-icon { color: var(--green); }
-.service-card--featured { border-color: var(--green) !important; }
-.who-list li::before { color: var(--green); }
-.service-list li::before { color: var(--green); }
-.bring-item { border-top-color: var(--green); }
-.bring-label { color: var(--green); }
-.tension { background: var(--green); }
-
+    @media (max-width: 960px) {
+      :root { --sp: 80px; }
+      .service-cards,
+      .faq-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+      .footer-nav { justify-content: center; }
+      nav .nav-links { display: none; }
+    }
   </style>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://cederbi.com/#organization",
-  "name": "Christopher Ceder - CederBI",
-  "alternateName": "CederBI",
-  "url": "https://cederbi.com",
-  "logo": "https://cederbi.com/logo.png",
-  "image": "https://cederbi.com/logo.png",
-  "telephone": "+15125405634",
-  "description": "Christopher Ceder helps business owners regain control through smarter operations, leadership development, and accountability. Fractional CEO & consulting services.",
-  "areaServed": [
-    { "@type": "City", "name": "Killeen", "containedInPlace": { "@type": "State", "name": "Texas" } },
-    { "@type": "City", "name": "Austin", "containedInPlace": { "@type": "State", "name": "Texas" } },
-    { "@type": "City", "name": "Omaha", "containedInPlace": { "@type": "State", "name": "Nebraska" } },
-    { "@type": "City", "name": "Council Bluffs", "containedInPlace": { "@type": "State", "name": "Iowa" } }
-  ],
-  "sameAs": []
-}
-</script>
 </head>
 <body>
-  <header class="nav-wrap" id="nav">
-    <nav class="nav-inner">
-      <a href="index.html" class="logo">
-        <img src="logo.png" alt="CederBI Logo" class="logo-img" />
-        <span class="logo-text">Christopher Ceder - CederBI</span>
-      </a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">CederBI</a>
       <ul class="nav-links">
-        <li><a href="index.html#how-i-work">How I Work</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="index.html#approach">How I Work</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+        <li><a class="nav-cta" href="contact.html">Let's Talk</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow"></p>
-        <h1>Find the right entry point<br /><em>for where you are now.</em></h1>
-        <p class="hero-sub">Every business is at a different place. Some owners need clarity first. Others know exactly what's broken. Some are ready for a real partner. All three paths lead to the same place: a business that runs better than it does today.</p>
-      </div>
-    </section>
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner reveal">
+      <h1>Three ways to work together</h1>
+      <p>Depending on where you are and how deep the problem goes. From a single audit to ongoing partnership.</p>
+    </div>
+  </section>
 
-    <section class="service-detail" id="clarity">
-      <div class="container">
-        <div class="service-detail-grid">
-          <div class="service-detail-text">
-            <div class="card-tag">Single Session</div>
-            <h2>Get Clarity Fast</h2>
-            <p class="service-price">Starting at a flat session fee —</p>
-            <p>A focused 1:1 strategy session designed to cut through the noise and give you a clear picture of what's actually holding your business back. We'll dig into your current state, identify the real constraints, and prioritize what needs to happen next.</p>
-            <p>You'll leave with a ranked action list, a better understanding of your own bottlenecks, and a framework for your next 30–90 days — not a vague vision, but a concrete path.</p>
-            <h4>What we cover:</h4>
-            <ul class="service-list">
-              <li>Current state audit of operations, team, and leadership</li>
-              <li>Identification of your highest-leverage constraints</li>
-              <li>Prioritized next steps with clear rationale</li>
-              <li>Guidance on whether deeper engagement makes sense</li>
-            </ul>
-            <p class="card-best"><strong>Best for:</strong> Owners who feel stuck or overwhelmed and need honest direction before making bigger investments.</p>
-            <a href="contact.html" class="btn-primary">Book This Session</a>
-          </div>
-          <div class="service-detail-aside">
-            <div class="aside-card">
-              <h4>What to expect</h4>
-              <ul>
-                <li>Pre-session intake questionnaire</li>
-                <li>90-minute 1:1 video call</li>
-                <li>Written summary + action plan</li>
-                <li>Follow-up Q&amp;A</li>
-              </ul>
-            </div>
-          </div>
+  <div class="rule"></div>
+
+  <section class="services-bg">
+    <div class="wrap">
+      <div class="service-cards">
+        <!-- Tier 1 -->
+        <div class="service-card reveal d1">
+          <div class="svc-tier">Tier 1</div>
+          <h3>Operations Audit</h3>
+          <p class="svc-desc">One intensive session to surface exactly what's slowing you down and map a clear, prioritized path forward.</p>
+          <div class="svc-price">$750 <small>/ session</small></div>
+          <div class="svc-divider"></div>
+          <ul class="svc-list">
+            <li>Deep-dive into your current operation and decision bottlenecks</li>
+            <li>Location-by-location consistency review</li>
+            <li>Prioritized 30–60–90 day action plan</li>
+            <li>Walk away with a real next step — not a deck</li>
+          </ul>
+          <a class="btn btn-ghost" href="contact.html">Book the Audit</a>
+        </div>
+
+        <!-- Tier 2 — Featured -->
+        <div class="service-card featured reveal d2">
+          <div class="svc-badge">Most Requested</div>
+          <div class="svc-tier">Tier 2</div>
+          <h3>Systems Build</h3>
+          <p class="svc-desc">I design and build the specific system your operation needs — POS-integrated dashboards, automations, SOP libraries, communication workflows.</p>
+          <div class="svc-price">Custom <small>/ scoped per project</small></div>
+          <div class="svc-divider"></div>
+          <ul class="svc-list">
+            <li>Custom ops dashboards with POS / Square integration</li>
+            <li>Automated guest inquiry response + invoice generation</li>
+            <li>Email &amp; SMS customer communication systems</li>
+            <li>Multi-location reporting and comparison views</li>
+            <li>SOP and training docs for shift/location consistency</li>
+          </ul>
+          <a class="btn btn-primary" href="contact.html">Scope a Project</a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="service-card reveal d3">
+          <div class="svc-tier">Tier 3</div>
+          <h3>Fractional Partner</h3>
+          <p class="svc-desc">Ongoing access to both strategic guidance and hands-on builds. Your part-time COO who also writes the code.</p>
+          <div class="svc-price">Monthly <small>/ retainer</small></div>
+          <div class="svc-divider"></div>
+          <ul class="svc-list">
+            <li>Bi-weekly strategy sessions + async support</li>
+            <li>Ongoing system builds and iteration</li>
+            <li>KPI tracking and accountability check-ins</li>
+            <li>3-month minimum — real change takes time</li>
+            <li>Small client roster — you get actual access</li>
+          </ul>
+          <a class="btn btn-ghost" href="contact.html">Start a Conversation</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="service-divider"><div class="container"><hr /></div></div>
+  <div class="rule"></div>
 
-    <section class="service-detail" id="structure">
-      <div class="container">
-        <div class="service-detail-grid">
-          <div class="service-detail-text">
-            <div class="card-tag">Project-Based</div>
-            <h2>Build Structure That Lasts</h2>
-            <p class="service-price">Scoped per project —</p>
-            <p>When you know what needs to be built, this is how we build it. Focused, defined-scope work on the specific areas of your business that need the most attention — with expert execution and a clear outcome.</p>
-            <p>Common projects include building out SOPs and documented workflows, creating performance dashboards and reporting frameworks, developing onboarding or training programs, and restructuring team roles or communication systems.</p>
-            <h4>Sample project areas:</h4>
-            <ul class="service-list">
-              <li>Standard operating procedures (SOPs) and process documentation</li>
-              <li>KPI dashboards and business intelligence frameworks</li>
-              <li>Team training programs and onboarding systems</li>
-              <li>Role clarity, org structure, and accountability maps</li>
-              <li>Workflow automation and technology stack review</li>
-            </ul>
-            <p class="card-best"><strong>Best for:</strong> Businesses that know exactly what needs fixing and want expert execution, not more advice.</p>
-            <a href="contact.html" class="btn-primary">Get a Project Proposal</a>
-          </div>
-          <div class="service-detail-aside">
-            <div class="aside-card">
-              <h4>How it works</h4>
-              <ul>
-                <li>Discovery call to scope the project</li>
-                <li>Written proposal with timeline</li>
-                <li>Weekly progress check-ins</li>
-                <li>Delivery + handoff session</li>
-                <li>30-day support window</li>
-              </ul>
-            </div>
-          </div>
+  <section class="faq-section">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Common Questions</span>
+        <h2>How does this actually work?</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item reveal d1">
+          <div class="faq-q">How long does a Systems Build take?</div>
+          <div class="faq-a">Typically 5–8 weeks from scope kickoff to launch. Depends on complexity, but most hospitality operations can see results in that window. We work in 2-week sprints with visible progress.</div>
+        </div>
+
+        <div class="faq-item reveal d2">
+          <div class="faq-q">Do you replace my existing tools?</div>
+          <div class="faq-a">No. I integrate with what you already have — Square, Toast, Shopify, Zapier. Your team doesn't learn new software. The dashboard just pulls from your existing systems and surfaces what matters.</div>
+        </div>
+
+        <div class="faq-item reveal d1">
+          <div class="faq-q">What if I'm not sure where to start?</div>
+          <div class="faq-a">That's exactly what the Operations Audit is for. $750 for 2–3 hours. You get clarity on what's broken, what's fixable, what the timeline looks like, and what it costs. No obligation to continue.</div>
+        </div>
+
+        <div class="faq-item reveal d2">
+          <div class="faq-q">Is this just software development?</div>
+          <div class="faq-a">No. I'm not a dev agency. I start with your operational reality — how you actually run things. Then I build systems that fit that reality. The code is the last 30%. The first 70% is understanding your business.</div>
+        </div>
+
+        <div class="faq-item reveal d1">
+          <div class="faq-q">Who do I contact after launch?</div>
+          <div class="faq-a">Me. That's the point. You're not handed off to support. If something breaks, changes, or needs tweaking, I fix it. If you're on a retainer, I'm your ongoing partner. If it's project-based, we include 4 weeks of post-launch support.</div>
+        </div>
+
+        <div class="faq-item reveal d2">
+          <div class="faq-q">Why is your roster small?</div>
+          <div class="faq-a">Because this kind of work requires real time and attention. You can't do it well if you're juggling 15 clients. I work with 3–4 retainer clients plus project-based work. You need real access, not a junior person with my brand.</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="service-divider"><div class="container"><hr /></div></div>
+  <div class="rule"></div>
 
-    <section class="service-detail" id="systems">
-      <div class="container">
-        <div class="service-detail-grid">
-          <div class="service-detail-text">
-            <div class="card-tag">Ongoing Partnership</div>
-            <h2>Turn Chaos Into Systems</h2>
-            <p class="service-price">Monthly retainer —</p>
-            <p>The deepest level of engagement. I become your fractional CEO or COO — a consistent, strategic presence in your business working alongside you to organize operations, develop your leadership team, and build the systems that create real consistency.</p>
-            <p>This isn't occasional check-in consulting. It's regular, hands-on collaboration with accountability baked in. If you're ready to transition from running everything to leading something, this is the path.</p>
-            <h4>What's included:</h4>
-            <ul class="service-list">
-              <li>Bi-weekly strategy calls (90 min each)</li>
-              <li>Ongoing process development and documentation</li>
-              <li>Leadership coaching for you and your key team members</li>
-              <li>KPI tracking and accountability check-ins</li>
-              <li>Asynchronous support between sessions</li>
-              <li>Quarterly business review and planning</li>
-            </ul>
-            <p class="card-best"><strong>Best for:</strong> Owners ready to move from "running everything" to leading a self-sufficient team. Minimum 3-month engagement.</p>
-            <a href="contact.html" class="btn-primary">Apply for This Partnership</a>
-          </div>
-          <div class="service-detail-aside">
-            <div class="aside-card">
-              <h4>The commitment</h4>
-              <ul>
-                <li>3-month minimum</li>
-                <li>2 strategy sessions / month</li>
-                <li>Full client portal with email access</li>
-                <li>Monthly written summary</li>
-                <li>Quarterly planning session</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <section class="cta-section">
+    <div class="cta-inner reveal">
+      <h2>Let's talk about what's actually slowing you down.</h2>
+      <p>Start with an Operations Audit — one focused session to surface your biggest bottlenecks and map out next steps.</p>
+      <a class="btn btn-primary" href="contact.html" style="font-size:15px;padding:16px 36px;">Book the Audit — $750</a>
+    </div>
+  </section>
 
-    <section class="faq-section">
-      <div class="container">
-        <div class="section-header">
-          <p class="eyebrow">Common Questions</p>
-          <h2>Before you reach out</h2>
-        </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">Do I need to start with the Strategy Session first?</button>
-            <div class="faq-a"><p>Not necessarily. If you already know what you need, we can jump straight to a project or partnership conversation. That said, many owners find the strategy session valuable even when they think they know the answer — it helps us confirm we're solving the right problem.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">How many clients do you work with at once?</button>
-            <div class="faq-a"><p>I keep my client load intentionally small — typically 3–5 ongoing clients at any time. This is how I stay genuinely invested in each business rather than spread thin across a dozen. If I'm currently full, I'll let you know and we can discuss timing.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">What industries or business types do you work with?</button>
-            <div class="faq-a"><p>I work best with owner-led businesses, Industry matters less than the stage you're at: you've got real traction, you're feeling the growing pains, and you're ready to do the work to build something more sustainable, then I would love to help.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">What does "fractional CEO" actually mean?</button>
-            <div class="faq-a"><p>It means you get the strategic and operational leadership of a seasoned executive — without a full-time salary, equity, or long-term commitment. I work with you part-time, on a defined retainer, focused on the outcomes that matter most to your business right now. Most owners I work with don't need a full-time executive yet. They need experienced, hands-on help to get to that next level.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-strip">
-      <div class="container">
-        <h2>Not sure which service fits?</h2>
-        <p>Tell me a little about where you are and what you're trying to solve. I'll give you an honest recommendation — even if that means pointing you somewhere else.</p>
-        <a href="contact.html" class="btn-primary btn-large">Start the Conversation</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <img src="logo.png" alt="CederBI Logo" class="logo-img" style="height:32px;" />
-          <span class="logo-text">Christopher Ceder</span>
-        </a>
-        <p>Fractional CEO &amp; Operations Consultant</p>
-      </div>
-      <nav class="footer-nav">
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <p class="footer-copy">© 2026 Christopher Ceder - CederBI. All rights reserved.</p>
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-logo" href="index.html">CederBI</a>
+      <ul class="footer-nav">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 CederBI · Christopher Ceder</span>
     </div>
   </footer>
+
   <script>
-// NAV: scroll shadow
-const nav = document.getElementById('nav');
-if (nav) {
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
-}
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
 
-// NAV: mobile toggle
-const toggle = document.querySelector('.nav-toggle');
-const links  = document.querySelector('.nav-links');
-if (toggle && links) {
-  toggle.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open);
-  });
-  // Close on link click
-  links.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      links.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// FAQ accordion
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const answer  = btn.nextElementSibling;
-    const isOpen  = btn.getAttribute('aria-expanded') === 'true';
-    // Close all
-    document.querySelectorAll('.faq-q').forEach(b => {
-      b.setAttribute('aria-expanded', 'false');
-      b.nextElementSibling.classList.remove('open');
-    });
-    // Open if was closed
-    if (!isOpen) {
-      btn.setAttribute('aria-expanded', 'true');
-      answer.classList.add('open');
-    }
-  });
-});
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.background = window.scrollY > 48
+        ? 'rgba(9,11,15,0.95)'
+        : 'rgba(9,11,15,0.65)';
+    }, { passive: true });
   </script>
+
 </body>
 </html>
