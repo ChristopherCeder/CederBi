@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Operations Audits & Custom System Builds | CederBI</title>
-  <meta name="description" content="Three ways to work together: Operations Audit ($750), Custom Systems Build (scoped), or Fractional Partner retainer. Built for restaurant & hospitality operators." />
+  <title>Software Sprints & Systems Coaching for Hospitality | CederBI</title>
+  <meta name="description" content="A focused diagnostic, software sprint, or systems coaching engagement for restaurant and hospitality operators. No outsourced operations retainer." />
+  <link rel="canonical" href="https://cederbi.com/services.html" />
+  <meta property="og:title" content="CederBI | Software sprints for hospitality" />
+  <meta property="og:description" content="Diagnose a workflow, build a focused tool, and coach the team that will run it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cederbi.com/services.html" />
+  <meta property="og:image" content="https://cederbi.com/logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="site.css" />
 
   <style>
     :root {
@@ -445,11 +452,13 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <nav id="nav">
     <div class="nav-inner">
       <a class="nav-logo" href="index.html">CederBI</a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="index.html#approach">How I Work</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
@@ -458,11 +467,13 @@
     </div>
   </nav>
 
+  <main id="main-content">
+
   <section class="hero">
     <div class="hero-glow"></div>
     <div class="hero-inner reveal">
-      <h1>Three ways to work together</h1>
-      <p>Depending on where you are and how deep the problem goes. From a single audit to ongoing partnership.</p>
+      <h1>Focused software. Clear ownership.</h1>
+      <p>Choose the level of help you need: diagnose the workflow, build one useful product, or coach the people who will run it.</p>
     </div>
   </section>
 
@@ -474,52 +485,50 @@
         <!-- Tier 1 -->
         <div class="service-card reveal d1">
           <div class="svc-tier">Tier 1</div>
-          <h3>Operations Audit</h3>
-          <p class="svc-desc">One intensive session to surface exactly what's slowing you down and map a clear, prioritized path forward.</p>
+          <h3>Systems Diagnostic</h3>
+          <p class="svc-desc">A focused working session to select one workflow worth turning into software and define the right first version.</p>
           <div class="svc-price">$350 <small>/ session</small></div>
           <div class="svc-divider"></div>
           <ul class="svc-list">
-            <li>Deep-dive into your current operation and decision bottlenecks</li>
-            <li>Location-by-location consistency review</li>
-            <li>Prioritized 30–60–90 day action plan</li>
-            <li>Walk away with a real next step — not a deck</li>
+            <li>Workflow and friction mapping</li>
+            <li>Internal versus customer-facing product decision</li>
+            <li>Success metric, scope, and ownership plan</li>
+            <li>Real next step — not a generic deck</li>
           </ul>
-          <a class="btn btn-ghost" href="contact.html">Book the Audit</a>
+          <a class="btn btn-ghost" href="contact.html">Book the Diagnostic</a>
         </div>
 
         <!-- Tier 2 — Featured -->
         <div class="service-card featured reveal d2">
           <div class="svc-badge">Most Requested</div>
           <div class="svc-tier">Tier 2</div>
-          <h3>Systems Build</h3>
-          <p class="svc-desc">I design and build the specific system your operation needs — POS-integrated dashboards, automations, SOP libraries, communication workflows.</p>
+          <h3>Operator Software Sprint</h3>
+          <p class="svc-desc">A scoped build for one useful internal tool or customer-facing product — designed around a real workflow, not a vague transformation project.</p>
           <div class="svc-price">Custom <small>/ scoped per project</small></div>
           <div class="svc-divider"></div>
           <ul class="svc-list">
-            <li>Custom ops dashboards with POS / Square integration</li>
-            <li>Automated guest inquiry response + invoice generation</li>
-            <li>Email &amp; SMS customer communication systems</li>
-            <li>Multi-location reporting and comparison views</li>
-            <li>SOP and training docs for shift/location consistency</li>
+            <li>Internal dashboards, tools, and workflow portals</li>
+            <li>Customer-facing inquiry, ordering, or service tools</li>
+            <li>Integrations with the stack you already use</li>
+            <li>Training and documentation for the team owner</li>
           </ul>
-          <a class="btn btn-primary" href="contact.html">Scope a Project</a>
+          <a class="btn btn-primary" href="contact.html">Scope a Software Sprint</a>
         </div>
 
         <!-- Tier 3 -->
         <div class="service-card reveal d3">
           <div class="svc-tier">Tier 3</div>
-          <h3>Fractional Partner</h3>
-          <p class="svc-desc">Ongoing access to both strategic guidance and hands-on builds. Your part-time COO who also writes the code.</p>
-          <div class="svc-price">Monthly <small>/ retainer</small></div>
+          <h3>Systems Coaching</h3>
+          <p class="svc-desc">Ongoing guidance for the leaders who own the workflow and software after the build.</p>
+          <div class="svc-price">Monthly <small>/ coaching</small></div>
           <div class="svc-divider"></div>
           <ul class="svc-list">
-            <li>Bi-weekly strategy sessions + async support</li>
-            <li>Ongoing system builds and iteration</li>
-            <li>KPI tracking and accountability check-ins</li>
-            <li>3-month minimum — real change takes time</li>
-            <li>Small client roster — you get actual access</li>
+            <li>Bi-weekly systems and adoption sessions</li>
+            <li>Product feedback and workflow review</li>
+            <li>Ownership and measurement accountability</li>
+            <li>Not a fractional COO or execution retainer</li>
           </ul>
-          <a class="btn btn-ghost" href="contact.html">Start a Conversation</a>
+          <a class="btn btn-ghost" href="contact.html">Ask About Coaching</a>
         </div>
       </div>
     </div>
@@ -536,8 +545,8 @@
 
       <div class="faq-grid">
         <div class="faq-item reveal d1">
-          <div class="faq-q">How long does a Systems Build take?</div>
-          <div class="faq-a">Typically 5–8 weeks from scope kickoff to launch. Depends on complexity, but most hospitality operations can see results in that window. We work in 2-week sprints with visible progress.</div>
+          <div class="faq-q">How long does a Software Sprint take?</div>
+          <div class="faq-a">Typically 4–8 weeks from a defined scope to handoff. The goal is one useful, adopted product—not a long open-ended transformation project.</div>
         </div>
 
         <div class="faq-item reveal d2">
@@ -547,7 +556,7 @@
 
         <div class="faq-item reveal d1">
           <div class="faq-q">What if I'm not sure where to start?</div>
-          <div class="faq-a">That's exactly what the Operations Audit is for. $350 for 2–3 hours. You get clarity on what's broken, what's fixable, what the timeline looks like, and what it costs. No obligation to continue.</div>
+          <div class="faq-a">Start with the Systems Diagnostic: $350 for 2–3 hours. We identify the workflow, define the smallest useful product, and decide who on your team owns it. There is no obligation to continue.</div>
         </div>
 
         <div class="faq-item reveal d2">
@@ -556,13 +565,13 @@
         </div>
 
         <div class="faq-item reveal d1">
-          <div class="faq-q">Who do I contact after launch?</div>
-          <div class="faq-a">Me. That's the point. You're not handed off to support. If something breaks, changes, or needs tweaking, I fix it. If you're on a retainer, I'm your ongoing partner. If it's project-based, we include 4 weeks of post-launch support.</div>
+          <div class="faq-q">Who owns the work after launch?</div>
+          <div class="faq-a">Your team does. The sprint includes a handoff, documentation, and coaching so a named owner can run the workflow. I can stay available for systems coaching, but I do not become your day-to-day operator.</div>
         </div>
 
         <div class="faq-item reveal d2">
-          <div class="faq-q">Why is your roster small?</div>
-          <div class="faq-a">Because this kind of work requires real time and attention. You can't do it well if you're juggling 15 clients. I work with 3–4 retainer clients plus project-based work. You need real access, not a junior person with my brand.</div>
+          <div class="faq-q">Can you take over this function for us?</div>
+          <div class="faq-a">No. CederBI is built for owners and leaders who want a better tool and stronger systems—not someone else to run the department. I will analyze, build, and coach; your team makes the operating decisions and executes them.</div>
         </div>
       </div>
     </div>
@@ -573,10 +582,12 @@
   <section class="cta-section">
     <div class="cta-inner reveal">
       <h2>Let's talk about what's actually slowing you down.</h2>
-      <p>Start with an Operations Audit — one focused session to surface your biggest bottlenecks and map out next steps.</p>
-      <a class="btn btn-primary" href="contact.html" style="font-size:15px;padding:16px 36px;">Book the Audit — $350</a>
+      <p>Start with a Systems Diagnostic: one focused session to choose the workflow worth turning into software.</p>
+      <a class="btn btn-primary" href="contact.html" style="font-size:15px;padding:16px 36px;">Book the Diagnostic — $350</a>
     </div>
   </section>
+
+  </main>
 
   <footer>
     <div class="footer-inner">
@@ -590,25 +601,7 @@
     </div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.style.background = window.scrollY > 48
-        ? 'rgba(9,11,15,0.95)'
-        : 'rgba(9,11,15,0.65)';
-    }, { passive: true });
-  </script>
+  <script src="site.js" defer></script>
 
 </body>
 </html>

@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Christopher Ceder | Operations & Systems Builder for Restaurants</title>
-  <meta name="description" content="10+ years in restaurant operations. Software developer. I build operational systems for multi-unit hospitality businesses — dashboards, automations, workflows." />
+  <title>About Christopher Ceder | Hospitality Software Builder</title>
+  <meta name="description" content="Christopher Ceder combines restaurant-operations experience with software development to build focused tools and coach hospitality teams to use them." />
+  <link rel="canonical" href="https://cederbi.com/about.html" />
+  <meta property="og:title" content="About Christopher Ceder | CederBI" />
+  <meta property="og:description" content="An operator who builds focused software for hospitality teams." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://cederbi.com/about.html" />
+  <meta property="og:image" content="https://cederbi.com/logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="site.css" />
 
   <style>
     :root {
@@ -397,11 +404,13 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <nav id="nav">
     <div class="nav-inner">
       <a class="nav-logo" href="index.html">CederBI</a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="index.html#approach">How I Work</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
@@ -409,6 +418,8 @@
       </ul>
     </div>
   </nav>
+
+  <main id="main-content">
 
   <section class="hero">
     <div class="hero-glow"></div>
@@ -429,14 +440,14 @@
 
       <div class="bio-grid">
         <div class="bio-photo-wrap reveal">
-          <img src="headshot.PNG" alt="Christopher Ceder" class="bio-photo-placeholder" style="object-fit: cover; object-position: center top;">
+          <img src="headshot.jpg" alt="Christopher Ceder" width="960" height="768" loading="lazy" class="bio-photo-placeholder" style="object-fit: cover; object-position: center top;">
         </div>
 
         <div class="bio-content reveal d2">
           <h2>I know what runs behind the scenes.</h2>
           <p>I spent a decade in restaurant operations — managing teams, scaling multi-location businesses, and learning exactly where manual systems fall apart. At 2am on a Friday, when a manager quits and you're running both locations yourself, you learn fast what needs to be systematized.</p>
           <p>Most consultants stop there. They deliver a deck and leave you to figure it out. I didn't want that for my clients, so I learned to code.</p>
-          <p>Now I build the systems, dashboards, and automations myself. Your operations stack doesn't change. Your business logic is preserved. But suddenly — you're not the bottleneck anymore.</p>
+          <p>Now I build focused internal and customer-facing software around the systems that already make your business work. Then I coach the people who own the workflow. The goal is capability inside your team—not dependency on me.</p>
         </div>
       </div>
     </div>
@@ -453,23 +464,23 @@
 
       <div class="expertise-grid">
         <div class="expertise-card reveal d1">
-          <h3>Multi-Location Operations</h3>
-          <p>When you have 2–5+ locations, consistency becomes the problem. I build systems that ensure every location runs the same way — without you managing every detail.</p>
+          <h3>Workflow Discovery</h3>
+          <p>I find the repetitive decision, handoff, or customer moment that is valuable enough to turn into a focused tool.</p>
         </div>
 
         <div class="expertise-card reveal d2">
-          <h3>POS & Square Integration</h3>
-          <p>Your data lives in Square, Toast, or other platforms. I connect it to dashboards, automations, and workflows so you actually see what's happening across all locations in real time.</p>
+          <h3>Internal Software</h3>
+          <p>Dashboards, operational portals, and simple tools that give the right person a usable view of the work and data.</p>
         </div>
 
         <div class="expertise-card reveal d1">
-          <h3>Operational Systems</h3>
-          <p>Scheduling, labor tracking, inventory management, guest communication. I don't build from scratch — I systematize what you're already doing and remove manual work.</p>
+          <h3>Customer-Facing Software</h3>
+          <p>Useful touchpoints for inquiries, service, ordering, and communication—built around the experience your customers actually need.</p>
         </div>
 
         <div class="expertise-card reveal d2">
-          <h3>Leadership Infrastructure</h3>
-          <p>Your team needs accountability rhythms and clear decision frameworks. I help build the systems that let managers actually manage instead of asking you for permission every time.</p>
+          <h3>Systems Coaching</h3>
+          <p>I coach leaders through adoption, ownership, and feedback loops. I do not step in as the person responsible for operating the business.</p>
         </div>
       </div>
     </div>
@@ -480,13 +491,13 @@
   <section class="story-section">
     <div class="wrap">
       <div class="story-inner reveal">
-        <p><strong>The specificity matters.</strong> I'm not a generic consultant. I don't work with every business type. I work with restaurant and hospitality operators who have 2–5 locations, run revenue of $2M–$15M, and are tired of being the answer to every operational question.</p>
+        <p><strong>The specificity matters.</strong> I am not a generic consultant or a fractional operator. I work with restaurant and hospitality leaders who have a real workflow problem and want to make their team more capable with focused software.</p>
         
         <p>That niche is deliberate. It's where I've lived. It's where I know exactly what systems break and how to fix them fast.</p>
 
         <p><strong>The code matters too.</strong> Most operators hire consultants who outsource the build. I build it myself. That means your dashboard is tailored to how you actually run things. It runs on your existing tools. You own it forever. No vendor lock-in, no renegotiation when you scale.</p>
 
-        <p><strong>Small roster by choice.</strong> I work with 3–4 clients at a time on retainers, plus project-based work. Not because it's trendy. Because this work requires real time and attention. You need actual access to me, not a junior person under my brand.</p>
+        <p><strong>Clear boundaries by choice.</strong> I analyze the workflow, build the product, and coach adoption. I do not take responsibility for staffing, daily execution, or every decision in your business. That boundary keeps the work focused and the ownership where it belongs.</p>
       </div>
     </div>
   </section>
@@ -495,11 +506,13 @@
 
   <section class="cta-section">
     <div class="cta-inner reveal">
-      <h2>Ready to get out of operations?</h2>
-      <p>Start with an Operations Audit. One focused session where we surface exactly what's slowing you down.</p>
-      <a class="btn btn-primary" href="contact.html" style="font-size:15px;padding:16px 36px;">Book the Audit — $350</a>
+      <h2>Ready to build the right tool?</h2>
+      <p>Start with a Systems Diagnostic. We will choose the workflow worth fixing and the team that will own it.</p>
+      <a class="btn btn-primary" href="contact.html" style="font-size:15px;padding:16px 36px;">Book the Diagnostic — $350</a>
     </div>
   </section>
+
+  </main>
 
   <footer>
     <div class="footer-inner">
@@ -513,25 +526,7 @@
     </div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.style.background = window.scrollY > 48
-        ? 'rgba(9,11,15,0.95)'
-        : 'rgba(9,11,15,0.65)';
-    }, { passive: true });
-  </script>
+  <script src="site.js" defer></script>
 
 </body>
 </html>

@@ -3,14 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Operations Partner for Restaurant & Hospitality | Christopher Ceder</title>
-  <meta name="description" content="Christopher Ceder builds operational systems for multi-unit restaurant, catering, and hospitality operators — custom dashboards, automations, and workflows that replace the need for you to run every shift." />
+  <title>Restaurant Software Builder & Systems Coach | CederBI</title>
+  <meta name="description" content="Christopher Ceder helps hospitality operators turn operational bottlenecks into focused internal and customer-facing software — then coaches the team to own it." />
+  <link rel="canonical" href="https://cederbi.com/" />
+  <meta property="og:title" content="CederBI | Operator-built software for hospitality" />
+  <meta property="og:description" content="Focused internal tools, customer-facing software, and systems coaching for hospitality operators." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cederbi.com/" />
+  <meta property="og:image" content="https://cederbi.com/logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "CederBI",
+    "url": "https://cederbi.com/",
+    "email": "christopher@cederbi.com",
+    "telephone": "+1-512-540-5634",
+    "description": "Focused internal and customer-facing software builds plus systems coaching for restaurant and hospitality teams.",
+    "founder": { "@type": "Person", "name": "Christopher Ceder" },
+    "areaServed": ["Iowa", "Nebraska", "Texas"]
+  }
+  </script>
 
   <!-- FONTS: Space Grotesk (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="site.css" />
 
   <style>
     /* =====================================================
@@ -1009,12 +1030,14 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- ===================== NAVIGATION ===================== -->
   <nav id="nav">
     <div class="nav-inner">
       <a class="nav-logo" href="index.html">CederBI</a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="#approach">How I Work</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
@@ -1022,6 +1045,8 @@
       </ul>
     </div>
   </nav>
+
+  <main id="main-content">
 
   <!-- ===================== HERO ===================== -->
   <section class="hero">
@@ -1032,17 +1057,17 @@
       <div class="hero-left reveal">
         <div class="hero-pill">
           <span class="hero-pill-dot"></span>
-          Multi-Unit Restaurant & Hospitality — Iowa / Nebraska / Texas
+          Software systems for restaurant & hospitality teams
         </div>
         <h1>
-          Stop running<br>every shift.<br>
-          <span class="grad-text">Start running<br>the business.</span>
+          Turn operational<br>friction into software<br>
+          <span class="grad-text">your team can own.</span>
         </h1>
         <p class="hero-sub">
-          I build the systems, dashboards, and automations that replace the need for you to be in every location. Custom solutions that work on your stack, not a generic SaaS that almost fits.
+          I map the workflow, build one focused internal or customer-facing tool, and coach your team through adoption. I do not become your outsourced operator.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="contact.html">Book an Operations Audit</a>
+          <a class="btn btn-primary" href="contact.html">Book a Systems Diagnostic</a>
           <a class="btn btn-ghost" href="#approach">See How It Works →</a>
         </div>
       </div>
@@ -1123,8 +1148,8 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">The Difference</span>
-        <h2>I don't hand you a deck.<br>I build the thing.</h2>
-        <p>Most consultants diagram a solution and disappear. I design and build the systems myself — dashboards, automations, workflows. It runs on your stack. You own it forever.</p>
+        <h2>I don't hand you a deck.<br>I build the useful thing.</h2>
+        <p>Most consultants diagram a solution and disappear. I identify the workflow, build the focused tool, and coach the owner through adoption. Your team owns the work and the product.</p>
       </div>
 
       <div class="diff-grid">
@@ -1214,8 +1239,8 @@
         </div>
         <div class="approach-card reveal d3">
           <div class="approach-icon" style="background:rgba(79,70,229,0.1);border:1px solid rgba(79,70,229,0.15);">3</div>
-          <h3>Train & Operate</h3>
-          <p>Your team learns to use it. I iterate based on real-world feedback. You hit your targets with less manual work.</p>
+          <h3>Coach & Hand Off</h3>
+          <p>Your team learns the tool and the operating rhythm around it. I coach adoption and improve the product; your team remains responsible for the work.</p>
         </div>
       </div>
     </div>
@@ -1234,50 +1259,48 @@
 
         <div class="svc-card reveal d1">
           <div class="svc-tier">Tier 1</div>
-          <h3>Operations Audit</h3>
-          <p class="svc-desc">One intensive session to surface exactly what's slowing you down and map a clear, prioritized path forward.</p>
+          <h3>Systems Diagnostic</h3>
+          <p class="svc-desc">A focused working session to identify one valuable workflow and define the software, data, and ownership it needs.</p>
           <div class="svc-price">$350 <small>/ session</small></div>
           <div class="svc-divider"></div>
           <ul class="svc-list">
-            <li>Deep-dive into bottlenecks and inconsistencies</li>
-            <li>Location-by-location operations review</li>
-            <li>Prioritized 30-60-90 day action plan</li>
-            <li>Real next steps with a follow-up</li>
+            <li>Workflow and bottleneck mapping</li>
+            <li>Internal versus customer-facing product decision</li>
+            <li>Clear scope, success metric, and team owner</li>
+            <li>Build recommendation and adoption plan</li>
           </ul>
-          <a class="btn btn-ghost" href="contact.html" style="width:100%;">Book the Audit</a>
+          <a class="btn btn-ghost" href="contact.html" style="width:100%;">Book the Diagnostic</a>
         </div>
 
         <div class="svc-card svc-featured reveal d2">
           <div class="svc-badge">Most Requested</div>
           <div class="svc-tier">Tier 2</div>
-          <h3>Systems Build</h3>
-          <p class="svc-desc">I design and build the specific system your operation needs — dashboards, automations, integrations, training docs.</p>
+          <h3>Operator Software Sprint</h3>
+          <p class="svc-desc">A scoped build for one internal tool or customer-facing product that removes a real point of friction.</p>
           <div class="svc-price">Custom <small>/ project scoped</small></div>
           <div class="svc-divider"></div>
           <ul class="svc-list">
-            <li>Custom ops dashboards & reporting</li>
-            <li>POS / Square automation & integrations</li>
-            <li>Guest communication workflows</li>
-            <li>Multi-location tracking & KPIs</li>
-            <li>Staff training & documentation</li>
+            <li>Internal dashboards, portals, and workflows</li>
+            <li>Customer-facing ordering, inquiry, or service tools</li>
+            <li>Practical integration with your existing stack</li>
+            <li>Product handoff, documentation, and training</li>
           </ul>
-          <a class="btn btn-primary" href="contact.html" style="width:100%;">Scope a Project</a>
+          <a class="btn btn-primary" href="contact.html" style="width:100%;">Scope a Software Sprint</a>
         </div>
 
         <div class="svc-card reveal d3">
           <div class="svc-tier">Tier 3</div>
-          <h3>Fractional Partner</h3>
-          <p class="svc-desc">Ongoing access to strategy and builds. I'm your part-time ops leader who also writes the code.</p>
-          <div class="svc-price">Monthly <small>/ retainer</small></div>
+          <h3>Systems Coaching</h3>
+          <p class="svc-desc">Structured advisory for the operators and leaders who own the workflow after the build.</p>
+          <div class="svc-price">Monthly <small>/ coaching</small></div>
           <div class="svc-divider"></div>
           <ul class="svc-list">
-            <li>weekly or Bi-weekly strategy sessions</li>
-            <li>Ongoing system builds & iteration</li>
-            <li>KPI tracking & accountability</li>
-            <li>3-month minimum</li>
-            <li>Small roster — genuine access</li>
+            <li>Bi-weekly decision and adoption sessions</li>
+            <li>Workflow reviews and product feedback</li>
+            <li>Clear ownership and measurement habits</li>
+            <li>Not a fractional COO or execution retainer</li>
           </ul>
-          <a class="btn btn-ghost" href="contact.html" style="width:100%;">Let's Talk</a>
+          <a class="btn btn-ghost" href="contact.html" style="width:100%;">Ask About Coaching</a>
         </div>
 
       </div>
@@ -1328,9 +1351,9 @@
       </div>
 
       <div class="ity-card reveal d2">
-        <h3>Book an Operations Audit.</h3>
-        <p>One focused session to surface where your operation is leaking time and money. Walk away with a real action plan.</p>
-        <a class="btn btn-primary" href="contact.html">Book the Audit — $350</a>
+        <h3>Start with a Systems Diagnostic.</h3>
+        <p>Choose the one workflow worth turning into a useful tool. Leave with a product direction, ownership plan, and clear next step.</p>
+        <a class="btn btn-primary" href="contact.html">Book the Diagnostic — $350</a>
         <a class="btn btn-ghost" href="services.html">See all services</a>
       </div>
 
@@ -1344,7 +1367,7 @@
     <div class="about-inner">
 
       <div class="about-photo-wrap reveal">
-        <img src="headshot.PNG" alt="Christopher Ceder" class="about-photo-placeholder" style="object-fit: cover; object-position: center top;">
+        <img src="headshot.jpg" alt="Christopher Ceder" width="960" height="768" loading="lazy" class="about-photo-placeholder" style="object-fit: cover; object-position: center top;">
         <div class="about-float-card">
           <div class="about-float-stats">
             <div class="about-float-stat">
@@ -1366,9 +1389,9 @@
       <div class="about-content reveal d2">
         <span class="eyebrow">About</span>
         <h2>I've been on both sides of this problem.</h2>
-        <p>Ten years running restaurant operations taught me what actually breaks when you scale. Not theoretically — at 7pm on a Friday when you've got two locations running, a catering event, and a manager just quit.</p>
-        <p>I'm also a software developer. When your operation needs a dashboard or automation, I build it myself — not outsource it, not point you to a vendor. That combination is rare enough that it changes what's possible.</p>
-        <p>I work with a small number of clients on purpose. It's the only way to do this well.</p>
+      <p>Ten years in restaurant operations taught me what actually breaks when you scale. Not theoretically — in the middle of service, when the work still depends on one person knowing the answer.</p>
+      <p>I'm also a software developer. I turn those repeatable pain points into focused tools, then coach the team that owns them. I am not here to run your operation for you.</p>
+      <p>I keep engagements intentionally narrow: one important problem, a useful product, and a team equipped to carry it forward.</p>
         <div class="about-tags">
           <span class="about-tag">Restaurant & Hospitality Ops</span>
           <span class="about-tag">Custom Software Builds</span>
@@ -1390,12 +1413,14 @@
         <span class="grad-text">ceiling</span>
         of your own operation?
       </h2>
-      <p>Start with an Operations Audit. One focused session where I surface exactly where your operation is bottlenecking. Walk away with a real plan.</p>
-      <a class="btn btn-primary" href="contact.html" style="font-size:15px;padding:16px 36px;">Book the Audit — $350</a>
+      <p>Start with a Systems Diagnostic. Identify the workflow worth building, the people who will own it, and the smallest useful next step.</p>
+      <a class="btn btn-primary" href="contact.html" style="font-size:15px;padding:16px 36px;">Book the Diagnostic — $350</a>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
+  </main>
+
   <footer>
     <div class="footer-inner">
       <a class="footer-logo" href="index.html">CederBI</a>
@@ -1409,27 +1434,7 @@
   </footer>
 
   <!-- ===================== JAVASCRIPT ===================== -->
-  <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Nav background intensifies on scroll
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.style.background = window.scrollY > 48
-        ? 'rgba(9,11,15,0.95)'
-        : 'rgba(9,11,15,0.65)';
-    }, { passive: true });
-  </script>
+  <script src="site.js" defer></script>
 
 </body>
 </html>

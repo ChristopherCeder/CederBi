@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | CederBI — Operations & Systems Builder</title>
-  <meta name="description" content="Get in touch with Christopher Ceder to discuss your restaurant operations, systems, and next steps." />
+  <title>Start a Software Systems Conversation | CederBI</title>
+  <meta name="description" content="Tell CederBI about the workflow you want to turn into an internal or customer-facing software tool, or the team you want to coach." />
+  <link rel="canonical" href="https://cederbi.com/contact.html" />
+  <meta property="og:title" content="Start a software systems conversation | CederBI" />
+  <meta property="og:description" content="Focused tools and coaching for hospitality teams." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cederbi.com/contact.html" />
+  <meta property="og:image" content="https://cederbi.com/logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="site.css" />
 
   <style>
     :root {
@@ -379,11 +386,13 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <nav id="nav">
     <div class="nav-inner">
       <a class="nav-logo" href="index.html">CederBI</a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="index.html#approach">How I Work</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
@@ -392,11 +401,13 @@
     </div>
   </nav>
 
+  <main id="main-content">
+
   <section class="hero">
     <div class="hero-glow"></div>
     <div class="hero-inner reveal">
-      <h1>Let's talk about your operation.</h1>
-      <p>Reach out directly — no AI response, no gatekeeping. Tell me what's broken, and let's figure out what's actually possible.</p>
+      <h1>Let's talk about the tool your team needs.</h1>
+      <p>Tell me about the workflow, internal system, or customer experience you want to improve. I will help you decide whether a focused software build or systems coaching is the right next step.</p>
     </div>
   </section>
 
@@ -425,7 +436,7 @@
           </div>
 
           <div class="contact-note">
-            <strong style="color:var(--t1);">Response time:</strong> I typically respond within 24 hours on weekdays. If you're a restaurant operator looking to solve a real operational problem, you'll hear from me directly.
+            <strong style="color:var(--t1);">A good fit:</strong> You have a clear operational or customer-facing problem and a person on your team ready to own it. I analyze, build, and coach—I do not take over day-to-day operations.
           </div>
         </div>
 
@@ -434,46 +445,49 @@
           <form action="https://formspree.io/f/xlgygdrn" method="POST">
             <div class="form-group">
               <label for="name">Your Name *</label>
-              <input type="text" id="name" name="name" required />
+              <input type="text" id="name" name="name" autocomplete="name" required />
             </div>
 
             <div class="form-group">
               <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="email" autocomplete="email" required />
             </div>
 
             <div class="form-group">
-              <label for="phone">Phone *</label>
-              <input type="tel" id="phone" name="phone" />
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" />
             </div>
 
             <div class="form-group">
               <label for="business">Business / Operation</label>
-              <input type="text" id="business" name="business" placeholder="e.g., 2-unit italian restaurant, catering company" />
+              <input type="text" id="business" name="business" autocomplete="organization" placeholder="e.g., restaurant group, catering company" />
             </div>
 
             <div class="form-group">
-              <label for="service">What are you interested in?</label>
+              <label for="service">What are you interested in? *</label>
               <select id="service" name="service" required>
                 <option value="">Select...</option>
-                <option value="audit">Operations Audit ($350)</option>
-                <option value="build">Systems Build (custom scoped)</option>
-                <option value="partner">Fractional Partner (retainer)</option>
+                <option value="diagnostic">Systems Diagnostic ($350)</option>
+                <option value="sprint">Operator Software Sprint (custom scoped)</option>
+                <option value="coaching">Systems Coaching</option>
                 <option value="unsure">Not sure yet</option>
               </select>
             </div>
 
             <div class="form-group full">
-              <label for="message">What's actually broken?</label>
-              <textarea id="message" name="message" placeholder="Tell me about your biggest operational bottleneck. Be specific." required></textarea>
+              <label for="message">What workflow should work better?</label>
+              <textarea id="message" name="message" placeholder="Tell me who uses it, what happens today, and what a better internal or customer experience would look like." required></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Send</button>
+            <button type="submit" class="submit-btn">Send briefing</button>
+            <p class="form-status" aria-live="polite">Thanks—your briefing is being sent.</p>
           </form>
         </div>
       </div>
     </div>
   </section>
+
+  </main>
 
   <footer>
     <div class="footer-inner">
@@ -487,25 +501,7 @@
     </div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.style.background = window.scrollY > 48
-        ? 'rgba(9,11,15,0.95)'
-        : 'rgba(9,11,15,0.65)';
-    }, { passive: true });
-  </script>
+  <script src="site.js" defer></script>
 
 </body>
 </html>
