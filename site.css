@@ -63,3 +63,77 @@ textarea:focus-visible {
   nav .nav-links.nav-links-open a { display: block; padding: 10px 12px; }
   nav .nav-links.nav-links-open .nav-cta { text-align: center; }
 }
+
+/* Warm editorial direction: hospitality first, software second. */
+:root {
+  --bg-0: #fffaf2 !important;
+  --bg-1: #f6efe4 !important;
+  --bg-2: #ede1d1 !important;
+  --bg-3: #e4d5c0 !important;
+  --bdr: rgba(45, 65, 54, .16) !important;
+  --bdr-hover: rgba(45, 65, 54, .36) !important;
+  --bdr-accent: rgba(190, 83, 57, .42) !important;
+  --c-amber: #c65d3d !important;
+  --c-violet: #2e604b !important;
+  --c-indigo: #2e604b !important;
+  --grad: #c65d3d !important;
+  --grad-h: #c65d3d !important;
+  --t1: #20372d !important;
+  --t2: #59685e !important;
+  --t3: #718076 !important;
+  --f-disp: 'Fraunces', Georgia, serif !important;
+  --f-body: 'DM Sans', system-ui, sans-serif !important;
+}
+
+body { background: var(--bg-0) !important; color: var(--t1) !important; }
+nav { background: rgba(255, 250, 242, .9) !important; }
+.nav-logo, .footer-logo { letter-spacing: -.04em !important; }
+.grad-text { background: none !important; -webkit-text-fill-color: var(--c-amber) !important; color: var(--c-amber) !important; }
+.rule { background: #d6c4ae !important; opacity: 1 !important; }
+.btn-primary, .nav-cta, .submit-btn { background: #c65d3d !important; color: #fffaf2 !important; }
+.btn-ghost { color: var(--t1) !important; background: transparent !important; }
+.eyebrow, .hero-pill, .contact-label { color: #66746b !important; }
+.hero::before { background-image: radial-gradient(circle, rgba(47, 96, 75, .15) 1px, transparent 1px) !important; }
+.hero-glow-v { background: radial-gradient(circle, rgba(198, 93, 61, .11) 0%, transparent 68%) !important; }
+.hero-glow-a, .hero-glow { background: radial-gradient(circle, rgba(46, 96, 75, .10) 0%, transparent 68%) !important; }
+.hero h1, .sec-head h2, .bio-content h2, .contact-info h2, .final-cta h2, .cta-inner h2 { letter-spacing: -.045em !important; }
+
+/* Replace glossy SaaS cards with warmer, printed-material surfaces. */
+.diff-visual, .svc-card, .service-card, .approach-card, .ity-card, .expertise-card,
+.contact-form, .faq-item, .about-float-card, .focus-card {
+  box-shadow: 0 12px 30px rgba(54, 44, 31, .07) !important;
+}
+.svc-card, .service-card, .approach-card, .ity-card, .expertise-card, .faq-item, .contact-form {
+  background: #fffdf8 !important;
+}
+.svc-card:hover, .service-card:hover, .approach-card:hover { transform: translateY(-3px) !important; }
+.svc-featured, .service-card.featured { background: #f0e3d1 !important; border-color: #c65d3d !important; }
+.svc-badge { background: #2e604b !important; color: #fffaf2 !important; }
+.ity, .services-bg, .bio-section, .contact-section { background: #f6efe4 !important; }
+.final-cta, .cta-section { background: #20372d !important; }
+.final-cta h2, .final-cta p, .cta-inner h2, .cta-inner p { color: #fffaf2 !important; }
+.final-cta .btn-primary, .cta-section .btn-primary { background: #e6b35b !important; color: #20372d !important; }
+footer { background: #20372d !important; border-color: rgba(255,255,255,.16) !important; }
+footer, footer a, .footer-copy { color: #f6efe4 !important; }
+
+.focus-card {
+  align-self: center;
+  padding: 42px;
+  border: 1px solid #d6c4ae;
+  border-radius: 18px;
+  background: #f0e3d1;
+  color: var(--t1);
+  transform: rotate(1.5deg);
+}
+.focus-card-label { margin-bottom: 20px; color: #c65d3d; font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.focus-card h2 { margin-bottom: 28px; font: 600 clamp(28px, 3vw, 40px)/1.08 var(--f-disp); letter-spacing: -.04em; }
+.focus-card-steps { border-top: 1px solid #cdbba4; }
+.focus-card-steps div { display: grid; grid-template-columns: 48px 1fr; gap: 12px; padding: 16px 0; border-bottom: 1px solid #cdbba4; }
+.focus-card-steps span { color: #c65d3d; font: 600 14px var(--f-disp); }
+.focus-card-steps p, .focus-card-note { color: #4c5e53; font-size: 14px; line-height: 1.5; }
+.focus-card-note { margin-top: 22px; }
+
+@media (max-width: 960px) {
+  .focus-card { display: none; }
+  nav .nav-links.nav-links-open { background: #fffaf2; }
+}
