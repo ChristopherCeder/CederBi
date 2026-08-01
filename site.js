@@ -48,6 +48,11 @@
     let activeSlide = 0;
     let swipeStart = null;
 
+    slides.forEach((slide) => {
+      const title = slide.querySelector('.demo-window-title');
+      if (title && slide.dataset.demoName) title.textContent = slide.dataset.demoName;
+    });
+
     const updateCarousel = (index) => {
       activeSlide = (index + slides.length) % slides.length;
       track.style.transform = `translateX(-${activeSlide * 100}%)`;
@@ -125,7 +130,7 @@
 
     const setActiveDemoScreen = (slide, requestedScreen) => {
       const main = slide.querySelector('.demo-main');
-      const product = slide.querySelector('.demo-window-title').textContent.split(' · ')[0];
+      const product = slide.dataset.product;
       const navItems = Array.from(slide.querySelectorAll('.demo-nav-item'));
       const defaultItem = navItems.find((item) => item.dataset.defaultScreen === 'true');
       const defaultScreen = defaultItem ? defaultItem.textContent.trim() : 'Overview';
