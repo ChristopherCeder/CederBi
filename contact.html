@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Request an Operations Overview or Custom Build | CederBI</title>
+  <title>Request an Operations Blueprint or Custom Operations System | CederBI</title>
   <meta name="description" content="Request an Operations Blueprint or tell CederBI about the custom operations system your hospitality or service business needs." />
   <link rel="canonical" href="https://cederbi.com/contact.html" />
-  <meta property="og:title" content="Start a software systems conversation | CederBI" />
-  <meta property="og:description" content="Start with an Operations Blueprint, build the right system, and put it to work through a 90-day results partnership." />
+  <meta property="og:title" content="Request an Operations Blueprint or Custom Operations System | CederBI" />
+  <meta property="og:description" content="Start with an Operations Blueprint, build a Custom Operations System, and put it to work through a 90-Day Results Partnership." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cederbi.com/contact.html" />
   <meta property="og:image" content="https://cederbi.com/logo.png" />
@@ -213,6 +213,47 @@
       margin-bottom: 40px;
     }
 
+    .contact-info-intro {
+      max-width: 420px;
+      margin: -24px 0 30px;
+      color: var(--t2);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .contact-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .contact-action {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 16px;
+      border: 1px solid var(--bdr);
+      border-radius: 10px;
+      background: var(--bg-0);
+      color: var(--t1);
+      text-decoration: none;
+      transition: border-color .2s ease, transform .2s ease, background .2s ease;
+    }
+    .contact-action:hover {
+      transform: translateY(-2px);
+      border-color: var(--c-violet);
+      background: #ffffff;
+    }
+    .contact-action span {
+      color: var(--t3);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .contact-action strong { font-size: 15px; }
+
     .contact-method {
       margin-bottom: 36px;
     }
@@ -263,6 +304,31 @@
 
     .form-intro { margin: 0 0 28px; color: var(--t2); font-size: 13px; line-height: 1.55; }
     .form-intro strong { color: #226d39; }
+
+    .form-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin: -12px 0 28px;
+      padding: 0;
+      color: var(--t2);
+      font-size: 12px;
+      list-style: none;
+    }
+    .form-trust li::before {
+      content: '✓';
+      margin-right: 5px;
+      color: #226d39;
+      font-weight: 800;
+    }
+
+    .form-followup {
+      margin: 13px 0 0;
+      color: var(--t3);
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: center;
+    }
 
     .form-group {
       margin-bottom: 24px;
@@ -380,7 +446,20 @@
     }
 
     @media (max-width: 960px) {
-      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero { padding: 100px 28px 52px; }
+      .hero h1 { font-size: clamp(39px, 11vw, 50px); }
+      .contact-section { padding: 36px 20px 72px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .contact-form { order: -1; padding: 30px 22px; }
+      .contact-info { padding: 10px 8px 0; }
+      .contact-info h2 { margin-bottom: 34px; }
+      .contact-info-intro { margin-top: -20px; }
+      .contact-method { margin-bottom: 26px; }
+      .contact-note { margin-top: 28px; padding-top: 28px; }
+      .form-group { margin-bottom: 20px; }
+      .form-group input,
+      .form-group textarea,
+      .form-group select { padding: 14px; font-size: 16px; }
       .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
       .footer-nav { justify-content: center; }
       nav .nav-links { display: none; }
@@ -409,8 +488,8 @@
   <section class="hero">
     <div class="hero-glow"></div>
     <div class="hero-inner reveal">
-      <h1>Let's make an important part of your business easier to run.</h1>
-      <p>Tell me what is getting in the way of consistency, visibility, or follow-through. Request an Operations Overview if you need help choosing the right problem, or select Custom Build if the need is already clear.</p>
+      <h1>Tell me what needs to work better.</h1>
+      <p>Start with an Operations Blueprint if you need help choosing the right problem, or request a Custom Operations System if the need is already clear.</p>
     </div>
   </section>
 
@@ -420,16 +499,17 @@
     <div class="wrap">
       <div class="contact-grid">
         <div class="contact-info reveal d1">
-          <h2>Get in touch</h2>
+          <h2>Prefer a direct conversation?</h2>
+          <p class="contact-info-intro">Reach Christopher directly. Call, text, or email—whichever is easiest.</p>
+
+          <div class="contact-actions" aria-label="Call or text Christopher">
+            <a href="tel:+15125405634" class="contact-action"><span>Call</span><strong>(512) 540-5634</strong></a>
+            <a href="sms:+15125405634" class="contact-action"><span>Text</span><strong>(512) 540-5634</strong></a>
+          </div>
 
           <div class="contact-method">
             <span class="contact-label">Email</span>
             <a href="mailto:christopher@cederbi.com" class="contact-value">christopher@cederbi.com</a>
-          </div>
-
-          <div class="contact-method">
-            <span class="contact-label">Text</span>
-            <a href="sms:+5125405634" class="contact-value">(512) 540-5634</a>
           </div>
 
           <div class="contact-method">
@@ -445,7 +525,12 @@
 
         <div class="contact-form reveal d2">
           <h3>Tell me where you want to start.</h3>
-          <p class="form-intro"><strong>Both paths start at $350.</strong> Scope determines the final price. You own the finished system, and there is no required CederBI subscription.</p>
+          <p class="form-intro"><strong>The Operations Blueprint is $350.</strong> Custom Operations Systems and 90-Day Results Partnerships are scoped per project.</p>
+          <ul class="form-trust" aria-label="What to expect">
+            <li>Personal reply from Christopher</li>
+            <li>No obligation to continue</li>
+            <li>You own the finished system</li>
+          </ul>
           <form action="https://formspree.io/f/xlgygdrn" method="POST">
             <div class="form-group">
               <label for="name">Your Name *</label>
@@ -471,8 +556,8 @@
               <label for="service">What are you looking for? *</label>
               <select id="service" name="service" required>
                 <option value="">Select...</option>
-                <option value="blueprint">Operations overview</option>
-                <option value="custom-build">Custom build</option>
+                <option value="blueprint">Operations Blueprint</option>
+                <option value="custom-system">Custom Operations System</option>
               </select>
             </div>
 
@@ -481,7 +566,8 @@
               <textarea id="message" name="message" placeholder="Tell me who is involved, what happens today, and what a better result would look like." required></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Send request</button>
+            <button type="submit" class="submit-btn">Send my request</button>
+            <p class="form-followup">Christopher reviews every request and responds directly.</p>
             <p class="form-status" aria-live="polite">Thanks—your request is being sent.</p>
           </form>
         </div>

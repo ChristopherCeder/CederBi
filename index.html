@@ -211,8 +211,8 @@
 
     /* ---- HERO ---- */
     .hero {
-      min-height: 100vh;
-      padding: 120px 28px 100px;
+      min-height: 100svh;
+      padding: 96px 28px 56px;
       display: flex;
       align-items: center;
       position: relative;
@@ -271,7 +271,7 @@
       font-size: 12px;
       font-weight: 500;
       color: var(--t3);
-      margin-bottom: 36px;
+      margin-bottom: 24px;
       width: fit-content;
     }
 
@@ -282,12 +282,12 @@
 
     .hero h1 {
       font-family: var(--f-disp);
-      font-size: clamp(40px, 5.5vw, 72px);
+      font-size: clamp(40px, 4.7vw, 62px);
       font-weight: 700;
       letter-spacing: -0.03em;
       line-height: 1.02;
       color: var(--t1);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .hero-sub {
@@ -295,13 +295,29 @@
       color: var(--t2);
       line-height: 1.68;
       max-width: 460px;
-      margin-bottom: 44px;
+      margin-bottom: 28px;
     }
 
     .hero-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 18px;
+      color: var(--t3);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .hero-trust span::before {
+      content: '✓';
+      margin-right: 6px;
+      color: var(--c-violet);
+      font-weight: 800;
     }
 
     /* Dashboard mockup */
@@ -1009,6 +1025,15 @@
     @media (max-width: 960px) {
       :root { --sp: 80px; }
 
+      .hero {
+        min-height: auto;
+        padding: 112px 28px 72px;
+      }
+
+      .hero-pill { margin-bottom: 22px; }
+      .hero h1 { font-size: clamp(40px, 12vw, 54px); }
+      .hero-sub { margin-bottom: 28px; }
+
       .hero-inner {
         grid-template-columns: 1fr;
       }
@@ -1078,23 +1103,26 @@
       <div class="hero-left reveal">
         <div class="hero-pill">
           <span class="hero-pill-dot"></span>
-          Custom software for hospitality &amp; service businesses
+          10 years in restaurant operations management
         </div>
         <h1>
-          Run your business with<br>less owner intervention.
-          <span class="grad-text">And more consistency.</span>
+          Run your business with less owner intervention—<span class="grad-text">and more consistency.</span>
         </h1>
         <p class="hero-sub">
-          Whether you operate one location or several, I build practical software that replaces scattered reporting, missed handoffs, and manual follow-up—so your team can act without always waiting on you.
+          I build practical software for hospitality and service businesses that replaces scattered reporting, missed handoffs, and manual follow-up—so your team can act without always waiting on you.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="contact.html?service=blueprint">Request an Operations Blueprint</a>
           <a class="btn btn-ghost" href="#approach">See the three steps →</a>
         </div>
+        <div class="hero-trust" aria-label="Why work with CederBI">
+          <span>Built around your operation</span>
+          <span>You own the finished system</span>
+        </div>
       </div>
 
       <aside class="hero-right reveal d2 focus-card" aria-label="What a focused CederBI project delivers">
-        <p class="focus-card-label">A clearer way to run the work</p>
+        <p class="focus-card-label">Operations experience + software execution</p>
         <h2>Build a business that depends less on you.</h2>
         <div class="focus-card-steps">
           <div><span>01</span><p><strong>Find the bottleneck</strong> that is slowing down your team or frustrating customers.</p></div>
@@ -1228,7 +1256,7 @@
                   <li>A useful first version is built</li>
                   <li>Existing tools inform the design</li>
                   <li>A team owner is named</li>
-                  <li>A 90-day results partnership helps the new process stick</li>
+                  <li>A 90-Day Results Partnership helps the new process stick</li>
                 </ul>
               </div>
             </div>
@@ -1351,7 +1379,7 @@
           <div class="svc-tier">Step 2 · Build</div>
           <h3>Custom Operations System</h3>
           <p class="svc-desc">Turn the Blueprint into an internal system or customer-facing experience built around how your business actually works.</p>
-          <div class="svc-price">Starting at $350 <small>/ final price follows the scope</small></div>
+          <div class="svc-price">Scoped per project <small>/ defined from your Blueprint</small></div>
           <div class="svc-divider"></div>
           <ul class="svc-list">
             <li>Internal dashboards and team tools</li>
@@ -1360,14 +1388,14 @@
             <li>Clear handoff, documentation, and training</li>
             <li>You own the finished system—no required CederBI subscription</li>
           </ul>
-          <a class="btn btn-primary" href="contact.html?service=custom-build" style="width:100%;">Request a Custom Build</a>
+          <a class="btn btn-primary" href="contact.html?service=custom-system" style="width:100%;">Request a Custom Operations System</a>
         </div>
 
         <div class="svc-card reveal d3">
           <div class="svc-tier">Step 3 · Put it to work</div>
           <h3>90-Day Results Partnership</h3>
           <p class="svc-desc">Launch the new system, strengthen how the team uses it, and improve it using the first 90 days of real operating feedback.</p>
-          <div class="svc-price">Starting at $350 <small>/ scoped to rollout needs</small></div>
+          <div class="svc-price">Scoped per project <small>/ based on rollout needs</small></div>
           <div class="svc-divider"></div>
           <ul class="svc-list">
             <li>Integrate the system into the way the team already works</li>
@@ -1375,7 +1403,7 @@
             <li>Learn how to keep the system accurate and up to date</li>
             <li>Use real feedback to refine the system and measure progress</li>
           </ul>
-          <a class="btn btn-ghost" href="contact.html?service=custom-build" style="width:100%;">Start with a Custom Build</a>
+          <a class="btn btn-ghost" href="contact.html?service=custom-system" style="width:100%;">Start with a Custom Operations System</a>
         </div>
 
       </div>
@@ -1394,7 +1422,7 @@
           <div class="about-float-stats">
             <div class="about-float-stat">
               <h5>10+</h5>
-              <p>Years in ops</p>
+              <p>Years in operations management</p>
             </div>
             <div class="about-float-stat">
               <h5>Dev</h5>
@@ -1411,7 +1439,7 @@
       <div class="about-content reveal d2">
         <span class="eyebrow">About</span>
         <h2>I've been on both sides of this problem.</h2>
-      <p>Ten years in restaurant operations taught me what actually breaks when you scale. Not theoretically — in the middle of service, when the work still depends on one person knowing the answer.</p>
+      <p>Ten years in restaurant operations management taught me what actually breaks when you scale. Not theoretically—in the middle of service, when the work still depends on one person knowing the answer.</p>
       <p>I'm also a software developer. I turn those repeatable pain points into focused tools, then help your team build the confidence and habits to use them well.</p>
       <p>I keep projects grounded in a clear priority, a practical solution, and a team equipped to carry it forward.</p>
         <div class="about-tags">
