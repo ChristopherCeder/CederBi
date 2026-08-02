@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Start a Software Systems Conversation | CederBI</title>
-  <meta name="description" content="Tell CederBI about the workflow you want to turn into a focused internal or customer-facing tool, or the team you want to coach." />
+  <title>Request an Operations Overview or Custom Build | CederBI</title>
+  <meta name="description" content="Request an Operations Blueprint or tell CederBI about the custom operations system your hospitality or service business needs." />
   <link rel="canonical" href="https://cederbi.com/contact.html" />
   <meta property="og:title" content="Start a software systems conversation | CederBI" />
-  <meta property="og:description" content="Focused tools and a 90-day rollout program for hospitality teams." />
+  <meta property="og:description" content="Start with an Operations Blueprint, build the right system, and put it to work through a 90-day results partnership." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cederbi.com/contact.html" />
   <meta property="og:image" content="https://cederbi.com/logo.png" />
@@ -147,11 +147,12 @@
     section { padding: 120px 28px; }
 
     .hero {
-      min-height: 60vh;
+      min-height: auto;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
+      padding: 104px 28px 68px;
     }
     .hero::before {
       content: '';
@@ -193,7 +194,7 @@
 
     .contact-section {
       background: var(--bg-1);
-      padding: 80px 28px;
+      padding: 52px 28px 88px;
     }
 
     .contact-grid {
@@ -257,8 +258,11 @@
       font-size: 24px;
       font-weight: 700;
       color: var(--t1);
-      margin-bottom: 32px;
+      margin-bottom: 10px;
     }
+
+    .form-intro { margin: 0 0 28px; color: var(--t2); font-size: 13px; line-height: 1.55; }
+    .form-intro strong { color: #226d39; }
 
     .form-group {
       margin-bottom: 24px;
@@ -406,7 +410,7 @@
     <div class="hero-glow"></div>
     <div class="hero-inner reveal">
       <h1>Let's make an important part of your business easier to run.</h1>
-      <p>Tell me about the process, internal system, or customer experience you want to improve. Together, we can decide whether an Operations Blueprint, custom tool, or 90-day rollout is the best next step.</p>
+      <p>Tell me what is getting in the way of consistency, visibility, or follow-through. Request an Operations Overview if you need help choosing the right problem, or select Custom Build if the need is already clear.</p>
     </div>
   </section>
 
@@ -440,7 +444,8 @@
         </div>
 
         <div class="contact-form reveal d2">
-          <h3>Quick briefing</h3>
+          <h3>Tell me where you want to start.</h3>
+          <p class="form-intro"><strong>Both paths start at $350.</strong> Scope determines the final price. You own the finished system, and there is no required CederBI subscription.</p>
           <form action="https://formspree.io/f/xlgygdrn" method="POST">
             <div class="form-group">
               <label for="name">Your Name *</label>
@@ -459,17 +464,15 @@
 
             <div class="form-group">
               <label for="business">Business / Operation</label>
-              <input type="text" id="business" name="business" autocomplete="organization" placeholder="e.g., restaurant group, catering company" />
+              <input type="text" id="business" name="business" autocomplete="organization" placeholder="e.g., restaurant, hospitality group, field service company" />
             </div>
 
             <div class="form-group">
-              <label for="service">What are you interested in? *</label>
+              <label for="service">What are you looking for? *</label>
               <select id="service" name="service" required>
                 <option value="">Select...</option>
-                <option value="blueprint">Operations Blueprint ($350)</option>
-                <option value="sprint">Custom Tool Build (custom scoped)</option>
-                <option value="rollout">90-Day Rollout &amp; Results Program</option>
-                <option value="unsure">Not sure yet</option>
+                <option value="blueprint">Operations overview</option>
+                <option value="custom-build">Custom build</option>
               </select>
             </div>
 
@@ -478,8 +481,8 @@
               <textarea id="message" name="message" placeholder="Tell me who is involved, what happens today, and what a better result would look like." required></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Send briefing</button>
-            <p class="form-status" aria-live="polite">Thanks—your briefing is being sent.</p>
+            <button type="submit" class="submit-btn">Send request</button>
+            <p class="form-status" aria-live="polite">Thanks—your request is being sent.</p>
           </form>
         </div>
       </div>
@@ -500,7 +503,7 @@
     </div>
   </footer>
 
-  <script src="site.js?v=20260801-3" defer></script>
+  <script src="site.js?v=20260801-6" defer></script>
 
 </body>
 </html>
