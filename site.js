@@ -39,7 +39,6 @@
 
   const carousel = document.querySelector('[data-demo-carousel]');
   if (carousel) {
-    carousel.querySelectorAll('[data-retire-demo]').forEach((slide) => slide.remove());
     const track = carousel.querySelector('.demo-track');
     const slides = Array.from(carousel.querySelectorAll('.demo-slide'));
     const dots = document.querySelector('[data-demo-dots]');
@@ -111,11 +110,7 @@
     const productModels = {
       'Business Health Dashboard': { nav: ['Overview', 'Performance', 'Team', 'Reports'] },
       'Live Task Board': { nav: ['Board', 'In Progress', 'Team', 'Completed'] },
-      'Customer Inbox': { nav: ['Inbox', 'Assigned', 'Follow-ups', 'Insights'] },
-      'Field Service Scheduler': { nav: ['Schedule', 'Dispatch', 'Crew', 'Jobs'] },
-      'Quote & Follow-Up Pipeline': { nav: ['Leads', 'Estimates', 'Follow-ups', 'Won'] },
-      'Team Checklist App': { nav: ['Today', 'Checklists', 'Training', 'Team'] },
-      'Client Portal': { nav: ['Overview', 'Project', 'Messages', 'Documents'] }
+      'Customer Inbox': { nav: ['Inbox', 'Assigned', 'Follow-ups', 'Insights'] }
     };
 
     const viewMeta = {
@@ -127,18 +122,6 @@
       },
       'Customer Inbox': {
         Inbox: ['Customer inbox', 'Handle every request in one place.', ['Unread', 'All']], Assigned: ['Ownership', 'See who is handling each conversation.', ['By person', 'By priority']], 'Follow-ups': ['Follow-up queue', 'Reach back out at the right time.', ['Due today', 'Upcoming']], Insights: ['Inbox insights', 'Improve response time and customer care.', ['This week', 'This month']]
-      },
-      'Field Service Scheduler': {
-        Schedule: ['Field schedule', 'See every appointment and time window.', ['Today', 'Tomorrow']], Dispatch: ['Dispatch', 'Match open work with available crews.', ['Unassigned', 'En route']], Crew: ['Crew availability', 'Know who is free, busy, or nearby.', ['Availability', 'Routes']], Jobs: ['Job management', 'Track every job from scheduled to paid.', ['Active', 'Needs review']]
-      },
-      'Quote & Follow-Up Pipeline': {
-        Leads: ['Sales pipeline', 'Turn new inquiries into booked work.', ['Pipeline', 'New today']], Estimates: ['Estimates', 'Create, send, and track every quote.', ['Drafts', 'Sent']], 'Follow-ups': ['Sales follow-ups', 'Keep promising opportunities moving.', ['Due today', 'Upcoming']], Won: ['Booked work', 'See what sold and what happens next.', ['This month', 'This quarter']]
-      },
-      'Team Checklist App': {
-        Today: ['Today’s work', 'Give every shift a clear standard.', ['Opening', 'Closing']], Checklists: ['Checklist library', 'Build repeatable processes once.', ['Active', 'Templates']], Training: ['Team training', 'Keep skills and certifications current.', ['In progress', 'Due soon']], Team: ['Team readiness', 'See completion by person and location.', ['Today', 'This week']]
-      },
-      'Client Portal': {
-        Overview: ['Client home', 'Give clients one clear place for updates.', ['Project', 'Account']], Project: ['Project plan', 'Make progress and next steps easy to see.', ['Timeline', 'Milestones']], Messages: ['Messages', 'Keep decisions out of scattered email threads.', ['Conversation', 'Requests']], Documents: ['Documents', 'Share, review, and approve files securely.', ['Shared', 'Needs approval']]
       }
     };
 
@@ -313,6 +296,12 @@
   const form = document.querySelector('form[action*="formspree.io"]');
   const status = document.querySelector('.form-status');
   if (form && status) {
+    const service = new URLSearchParams(window.location.search).get('service');
+    const serviceSelect = form.querySelector('#service');
+    if (serviceSelect && Array.from(serviceSelect.options).some((option) => option.value === service)) {
+      serviceSelect.value = service;
+    }
+
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       const button = form.querySelector('button[type="submit"]');
