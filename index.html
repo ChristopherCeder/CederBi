@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workflow Tool Builder for Independent Hospitality Groups | CederBI</title>
-  <meta name="description" content="CederBI helps independent hospitality groups with 2–10 locations solve operational and customer experience problems with practical tools their teams can own." />
+  <title>Custom Operations Software for Hospitality &amp; Service Businesses | CederBI</title>
+  <meta name="description" content="CederBI builds practical software that helps single and multi-location hospitality and service businesses run with less owner intervention and more consistency." />
   <link rel="canonical" href="https://cederbi.com/" />
-  <meta property="og:title" content="CederBI | Workflow tools for independent hospitality groups" />
-  <meta property="og:description" content="Practical tools that help hospitality teams solve the problems holding them back." />
+  <meta property="og:title" content="CederBI | Custom operations software for service businesses" />
+  <meta property="og:description" content="Practical software that helps hospitality and service businesses run with less owner intervention and more consistency." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cederbi.com/" />
   <meta property="og:image" content="https://cederbi.com/logo.png" />
@@ -20,7 +20,7 @@
     "url": "https://cederbi.com/",
     "email": "christopher@cederbi.com",
     "telephone": "+1-512-540-5634",
-    "description": "Practical business tools and a 90-day rollout program for independent hospitality groups with 2–10 locations.",
+    "description": "Custom operations software for single and multi-location hospitality and service businesses.",
     "founder": { "@type": "Person", "name": "Christopher Ceder" },
     "areaServed": ["Iowa", "Nebraska", "Texas"]
   }
@@ -615,13 +615,31 @@
       align-items: start;
     }
 
+    .service-path {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin: -12px 0 28px;
+      color: var(--t3);
+      font-family: var(--f-disp);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    .service-path span { padding: 8px 13px; border: 1px solid var(--bdr); border-radius: 999px; background: var(--bg-0); }
+    .service-path i { color: var(--c-amber); font-style: normal; }
+
     .svc-card {
       border: 1px solid var(--bdr);
       border-radius: var(--r);
       padding: 40px 32px;
       background: var(--bg-2);
+      display: flex;
+      flex-direction: column;
       transition: border-color 0.25s ease, transform 0.25s ease;
     }
+    .svc-card .btn { margin-top: auto; }
     .svc-card:hover {
       border-color: var(--bdr-hover);
       transform: translateY(-2px);
@@ -717,6 +735,8 @@
       flex-shrink: 0;
       margin-top: 1px;
     }
+    .blueprint-note { margin: -12px 0 24px; padding: 11px 12px; border: 1px solid rgba(34,109,57,.18); border-radius: 9px; background: rgba(34,109,57,.06); color: var(--t2); font-size: 11px; line-height: 1.5; }
+    .blueprint-note strong { color: #226d39; }
 
     /* ---- IS THIS YOU ---- */
     .ity {
@@ -1003,6 +1023,8 @@
         grid-template-columns: 1fr;
         gap: 48px;
       }
+      .service-path { align-items: stretch; flex-direction: column; gap: 7px; margin-top: -4px; text-align: center; }
+      .service-path i { transform: rotate(90deg); }
 
       .about-inner {
         grid-template-columns: 1fr;
@@ -1056,24 +1078,24 @@
       <div class="hero-left reveal">
         <div class="hero-pill">
           <span class="hero-pill-dot"></span>
-          Software systems for restaurant & hospitality teams
+          Custom software for hospitality &amp; service businesses
         </div>
         <h1>
-          Make the everyday work<br>of your business
-          <span class="grad-text">easier to run.</span>
+          Run your business with<br>less owner intervention.
+          <span class="grad-text">And more consistency.</span>
         </h1>
         <p class="hero-sub">
-          For independent hospitality groups with 2–10 locations. I help you solve the operational or customer experience issue that keeps costing time, consistency, or revenue.
+          Whether you operate one location or several, I build practical software that replaces scattered reporting, missed handoffs, and manual follow-up—so your team can act without always waiting on you.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="contact.html">Book an Operations Blueprint</a>
+          <a class="btn btn-primary" href="contact.html">Request an Operations Blueprint</a>
           <a class="btn btn-ghost" href="#approach">See the three steps →</a>
         </div>
       </div>
 
       <aside class="hero-right reveal d2 focus-card" aria-label="What a focused CederBI project delivers">
-        <p class="focus-card-label">A focused approach</p>
-        <h2>Solve the problems that are holding your business back.</h2>
+        <p class="focus-card-label">A clearer way to run the work</p>
+        <h2>Build a business that depends less on you.</h2>
         <div class="focus-card-steps">
           <div><span>01</span><p><strong>Find the bottleneck</strong> that is slowing down your team or frustrating customers.</p></div>
           <div><span>02</span><p><strong>Build the right solution</strong> using the systems you already have.</p></div>
@@ -1081,6 +1103,61 @@
         </div>
         <p class="focus-card-note">Clear scope. Practical tools. Results your team can carry forward.</p>
       </aside>
+
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <!-- ===================== PROBLEM RECOGNITION ===================== -->
+  <section class="ity">
+    <div class="ity-inner">
+
+      <div class="reveal">
+        <span class="eyebrow">Is this you?</span>
+        <h2 style="font-family:var(--f-disp);font-size:clamp(28px,3.5vw,42px);font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:var(--t1);margin-bottom:40px;">
+          You've built something real.<br>But too much still runs through you.
+        </h2>
+        <ul class="ity-list">
+          <li class="ity-item">
+            <div class="ity-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div>
+              <h4>Every shift or location runs differently</h4>
+              <p>Consistency depends on who is working—not on a clear system everyone can follow.</p>
+            </div>
+          </li>
+          <li class="ity-item">
+            <div class="ity-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div>
+              <h4>You're still the answer to everything</h4>
+              <p>Your team is capable, but routine decisions and updates still wait on you.</p>
+            </div>
+          </li>
+          <li class="ity-item">
+            <div class="ity-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div>
+              <h4>The work is scattered across too many places</h4>
+              <p>Spreadsheets, texts, inboxes, and disconnected systems make it hard to see what actually needs attention.</p>
+            </div>
+          </li>
+          <li class="ity-item">
+            <div class="ity-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div>
+              <h4>Growth keeps adding complexity</h4>
+              <p>More customers, people, or locations create more coordination instead of more freedom.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="ity-card reveal d2">
+        <span class="eyebrow">The first step</span>
+        <h3>Find the system that will give you the most leverage.</h3>
+        <p>Start with an Operations Blueprint to identify where better software can save time, improve consistency, or remove an everyday dependency on you. After we finalize the recommended features and visual direction, you receive the written Blueprint within two business days.</p>
+        <p class="blueprint-note"><strong>Your $350 becomes build credit</strong> when you move forward with a Custom Operations System within 30 days.</p>
+        <a class="btn btn-primary" href="contact.html">Request an Operations Blueprint — $350</a>
+        <a class="btn btn-ghost" href="services.html">See the full path</a>
+      </div>
 
     </div>
   </section>
@@ -1151,7 +1228,7 @@
                   <li>A useful first version is built</li>
                   <li>Existing tools inform the design</li>
                   <li>A team owner is named</li>
-                  <li>A 90-day rollout helps the new process stick</li>
+                  <li>A 90-day results partnership helps the new process stick</li>
                 </ul>
               </div>
             </div>
@@ -1199,7 +1276,7 @@
         <div class="sec-head">
           <span class="eyebrow">Interactive examples</span>
           <h2>See what a practical business tool can look like.</h2>
-          <p>Swipe through seven interactive examples. Each one shows a different kind of practical software built around the way a service business works.</p>
+          <p>Explore three flagship examples: clearer owner visibility, stronger team execution, and faster customer follow-up.</p>
         </div>
         <div class="showcase-controls" aria-label="Demo navigation">
           <button class="showcase-arrow" type="button" data-demo-prev aria-label="Previous example">←</button>
@@ -1231,22 +1308,22 @@
           </article>
 
           <!-- Field Service Scheduler -->
-          <article class="demo-slide demo-theme-forest demo-variant-4" data-product="Field Service Scheduler" data-demo-name="Field Service Scheduler" aria-label="Field Service Scheduler example">
+          <article class="demo-slide demo-theme-forest demo-variant-4" data-retire-demo data-product="Field Service Scheduler" data-demo-name="Field Service Scheduler" aria-label="Field Service Scheduler example">
             <div class="demo-frame"><div class="demo-window-bar"><i class="demo-window-dot"></i><i class="demo-window-dot"></i><i class="demo-window-dot"></i><span class="demo-window-title">Field Service Scheduler</span></div><div class="demo-shell"><aside class="demo-sidebar"><div class="demo-brand"><i class="demo-brand-mark"></i>Oak &amp; Ember</div><div class="demo-nav-item is-current">Overview</div><div class="demo-nav-item">Service</div><div class="demo-nav-item">Team</div><div class="demo-nav-item">Reports</div></aside><div class="demo-main"></div></div></div>
           </article>
 
           <!-- Quote & Follow-Up Pipeline -->
-          <article class="demo-slide demo-theme-navy demo-variant-5" data-product="Quote &amp; Follow-Up Pipeline" data-demo-name="Quote &amp; Follow-Up Pipeline" aria-label="Quote and Follow-Up Pipeline example">
+          <article class="demo-slide demo-theme-navy demo-variant-5" data-retire-demo data-product="Quote &amp; Follow-Up Pipeline" data-demo-name="Quote &amp; Follow-Up Pipeline" aria-label="Quote and Follow-Up Pipeline example">
             <div class="demo-frame"><div class="demo-window-bar"><i class="demo-window-dot"></i><i class="demo-window-dot"></i><i class="demo-window-dot"></i><span class="demo-window-title">Quote &amp; Follow-Up Pipeline</span></div><div class="demo-shell"><aside class="demo-sidebar"><div class="demo-brand"><i class="demo-brand-mark"></i>Field &amp; Fork</div><div class="demo-nav-item is-current">Overview</div><div class="demo-nav-item">Service</div><div class="demo-nav-item">Team</div><div class="demo-nav-item">Reports</div></aside><div class="demo-main"></div></div></div>
           </article>
 
           <!-- Team Checklist App -->
-          <article class="demo-slide demo-theme-sand demo-variant-6" data-product="Team Checklist App" data-demo-name="Team Checklist App" aria-label="Team Checklist App example">
+          <article class="demo-slide demo-theme-sand demo-variant-6" data-retire-demo data-product="Team Checklist App" data-demo-name="Team Checklist App" aria-label="Team Checklist App example">
             <div class="demo-frame"><div class="demo-window-bar"><i class="demo-window-dot"></i><i class="demo-window-dot"></i><i class="demo-window-dot"></i><span class="demo-window-title">Team Checklist App</span></div><div class="demo-shell"><aside class="demo-sidebar"><div class="demo-brand"><i class="demo-brand-mark"></i>Market Table</div><div class="demo-nav-item is-current">Overview</div><div class="demo-nav-item">Service</div><div class="demo-nav-item">Team</div><div class="demo-nav-item">Reports</div></aside><div class="demo-main"></div></div></div>
           </article>
 
           <!-- Client Portal -->
-          <article class="demo-slide demo-theme-forest demo-variant-7" data-product="Client Portal" data-demo-name="Client Portal" aria-label="Client Portal example">
+          <article class="demo-slide demo-theme-forest demo-variant-7" data-retire-demo data-product="Client Portal" data-demo-name="Client Portal" aria-label="Client Portal example">
             <div class="demo-frame"><div class="demo-window-bar"><i class="demo-window-dot"></i><i class="demo-window-dot"></i><i class="demo-window-dot"></i><span class="demo-window-title">Client Portal</span></div><div class="demo-shell"><aside class="demo-sidebar"><div class="demo-brand"><i class="demo-brand-mark"></i>Oak &amp; Ember</div><div class="demo-nav-item is-current">Overview</div><div class="demo-nav-item">Service</div><div class="demo-nav-item">Team</div><div class="demo-nav-item">Reports</div></aside><div class="demo-main"></div></div></div>
           </article>
 
@@ -1264,7 +1341,7 @@
 
       <div class="showcase-footer reveal d2">
         <div class="showcase-dots" data-demo-dots aria-label="Choose an example"></div>
-        <p class="showcase-status" data-demo-status aria-live="polite">Example 1 of 7 · Business Health Dashboard</p>
+        <p class="showcase-status" data-demo-status aria-live="polite">Example 1 of 3 · Business Health Dashboard</p>
       </div>
     </div>
   </section>
@@ -1276,110 +1353,61 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">Services</span>
-        <h2>Where do you need to start?</h2>
+        <h2>One clear path from problem to results.</h2>
+        <p>Start by choosing the right business problem. Build only what the operation needs. Then make sure the improvement lasts.</p>
       </div>
+      <div class="service-path reveal" aria-label="Three-stage engagement path"><span>1 · Diagnose</span><i>→</i><span>2 · Build</span><i>→</i><span>3 · Launch &amp; improve</span></div>
       <div class="services-grid">
 
         <div class="svc-card reveal d1">
-          <div class="svc-tier">Tier 1</div>
+          <div class="svc-tier">Step 1 · Start here</div>
           <h3>Operations Blueprint</h3>
           <p class="svc-desc">A focused working session to identify the business process worth improving and define the software, data, and ownership it needs.</p>
           <div class="svc-price">$350 <small>/ session</small></div>
           <div class="svc-divider"></div>
           <ul class="svc-list">
-            <li>Map the work and identify where friction is costing you</li>
-            <li>Decide whether the solution serves your team, customers, or both</li>
-            <li>Set a clear goal, scope, and owner</li>
-            <li>Leave with a practical, prioritized next step</li>
+            <li>Map the bottleneck and how the work happens today</li>
+            <li>Prioritize the software opportunity with the most leverage</li>
+            <li>Define the recommended features, visual direction, and owner</li>
+            <li>Receive the written Blueprint within two business days of finalizing those decisions</li>
           </ul>
-          <a class="btn btn-ghost" href="contact.html" style="width:100%;">Book an Operations Blueprint</a>
+          <p class="blueprint-note"><strong>$350 build credit:</strong> Apply the full session price to a Custom Operations System started within 30 days.</p>
+          <a class="btn btn-ghost" href="contact.html" style="width:100%;">Request the Blueprint</a>
         </div>
 
         <div class="svc-card svc-featured reveal d2">
-          <div class="svc-badge">Most Requested</div>
-          <div class="svc-tier">Tier 2</div>
-          <h3>Custom Tool Build</h3>
-          <p class="svc-desc">A focused build for an internal tool or customer-facing experience that solves a real business problem and delivers a measurable result.</p>
-          <div class="svc-price">Custom <small>/ project scoped</small></div>
+          <div class="svc-badge">Built from your Blueprint</div>
+          <div class="svc-tier">Step 2 · Build</div>
+          <h3>Custom Operations System</h3>
+          <p class="svc-desc">Turn the Blueprint into an internal system or customer-facing experience built around how your business actually works.</p>
+          <div class="svc-price">Starting at $350 <small>/ final price follows the scope</small></div>
           <div class="svc-divider"></div>
           <ul class="svc-list">
             <li>Internal dashboards and team tools</li>
             <li>Customer-facing ordering, inquiry, or service experiences</li>
             <li>Connect with the systems you already use</li>
             <li>Clear handoff, documentation, and training</li>
+            <li>You own the finished system—no required CederBI subscription</li>
           </ul>
-          <a class="btn btn-primary" href="contact.html" style="width:100%;">Talk About a Custom Build</a>
+          <a class="btn btn-primary" href="contact.html" style="width:100%;">Request a Custom Build</a>
         </div>
 
         <div class="svc-card reveal d3">
-          <div class="svc-tier">Tier 3</div>
-          <h3>90-Day Rollout &amp; Results Program</h3>
-          <p class="svc-desc">A focused 90-day partnership to launch the new tool, build it into your team’s routine, and show the results.</p>
-          <div class="svc-price">90 days <small>/ fixed program</small></div>
+          <div class="svc-tier">Step 3 · Put it to work</div>
+          <h3>90-Day Results Partnership</h3>
+          <p class="svc-desc">Launch the new system, strengthen how the team uses it, and improve it using the first 90 days of real operating feedback.</p>
+          <div class="svc-price">Starting at $350 <small>/ scoped to rollout needs</small></div>
           <div class="svc-divider"></div>
           <ul class="svc-list">
-            <li>Launch support, training, and leadership check-ins</li>
-            <li>Review how the team is using the tool and refine it</li>
-            <li>Build clear habits around ownership and measurement</li>
-            <li>Finish with a 90-day results summary and next-step plan</li>
+            <li>Integrate the system into the way the team already works</li>
+            <li>Hands-on training and adoption support</li>
+            <li>Learn how to keep the system accurate and up to date</li>
+            <li>Use real feedback to refine the system and measure progress</li>
           </ul>
-          <a class="btn btn-ghost" href="contact.html" style="width:100%;">Plan Your 90-Day Rollout</a>
+          <a class="btn btn-ghost" href="contact.html" style="width:100%;">Start with a Custom Build</a>
         </div>
 
       </div>
-    </div>
-  </section>
-
-  <div class="rule"></div>
-
-  <!-- ===================== IS THIS YOU ===================== -->
-  <section class="ity">
-    <div class="ity-inner">
-
-      <div class="reveal">
-        <span class="eyebrow">Is this you?</span>
-        <h2 style="font-family:var(--f-disp);font-size:clamp(28px,3.5vw,42px);font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:var(--t1);margin-bottom:40px;">
-          You've built something real.<br>But it still runs on you.
-        </h2>
-        <ul class="ity-list">
-          <li class="ity-item">
-            <div class="ity-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-            <div>
-              <h4>Every location runs differently</h4>
-              <p>Consistency depends on who's managing that shift — not on any system you've built.</p>
-            </div>
-          </li>
-          <li class="ity-item">
-            <div class="ity-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-            <div>
-              <h4>You're still the answer to everything</h4>
-              <p>Your team is capable — they just wait on you before making any real call.</p>
-            </div>
-          </li>
-          <li class="ity-item">
-            <div class="ity-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-            <div>
-              <h4>Your numbers live in five systems</h4>
-              <p>Square, spreadsheets, your head, emails — no single view of what's actually happening.</p>
-            </div>
-          </li>
-          <li class="ity-item">
-            <div class="ity-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-            <div>
-              <h4>Growth plans keep getting delayed</h4>
-              <p>You know the next step. You just can't escape operations long enough to take it.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="ity-card reveal d2">
-        <h3>Start with an Operations Blueprint.</h3>
-        <p>Choose the business problem worth solving. Leave with a clear direction, ownership plan, and next step.</p>
-        <a class="btn btn-primary" href="contact.html">Book an Operations Blueprint — $350</a>
-        <a class="btn btn-ghost" href="services.html">See all services</a>
-      </div>
-
     </div>
   </section>
 
@@ -1436,7 +1464,7 @@
         <span class="grad-text">easier to run?</span>
       </h2>
       <p>Start with an Operations Blueprint. Identify the business problem worth solving, the people who will guide it, and the best next step.</p>
-      <a class="btn btn-primary" href="contact.html" style="font-size:15px;padding:16px 36px;">Book an Operations Blueprint — $350</a>
+      <a class="btn btn-primary" href="contact.html" style="font-size:15px;padding:16px 36px;">Request an Operations Blueprint — $350</a>
     </div>
   </section>
 
@@ -1456,7 +1484,7 @@
   </footer>
 
   <!-- ===================== JAVASCRIPT ===================== -->
-  <script src="site.js?v=20260801-3" defer></script>
+  <script src="site.js?v=20260801-4" defer></script>
 
 </body>
 </html>

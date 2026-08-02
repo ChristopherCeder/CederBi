@@ -317,7 +317,7 @@
       event.preventDefault();
       const button = form.querySelector('button[type="submit"]');
       status.style.display = 'block';
-      status.textContent = 'Sending your briefing…';
+      status.textContent = 'Sending your request…';
       if (button) button.disabled = true;
       try {
         const response = await fetch(form.action, {
@@ -327,7 +327,7 @@
         });
         if (!response.ok) throw new Error('Form submission failed');
         form.reset();
-        status.textContent = 'Thanks—your briefing is in. Christopher will respond directly.';
+        status.textContent = 'Thanks—your request is in. Christopher will respond directly.';
       } catch (error) {
         status.textContent = 'Something went wrong. Please email christopher@cederbi.com instead.';
       } finally {
